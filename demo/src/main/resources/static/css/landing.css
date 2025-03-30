@@ -1,0 +1,750 @@
+/* General Body Styles */
+body {
+    background-color: rgb(0, 0, 49);
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Navbar Styles */
+nav {
+    background-color: rgba(0, 0, 49, 0.393);;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 95%;
+    z-index: 10;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Navbar Links */
+.navbar-links {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: color 0.3s ease;
+    transition: translate 0.3s ease;
+}
+
+.navbar-links a:hover {
+    color: rgb(160, 159, 159);
+    translate: 0rem 0.2rem;
+}
+
+/* Login/Signup Buttons */
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.auth-buttons .login-btn {
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: color 0.3s ease;
+    transition: translate 0.3s ease;
+}
+
+.auth-buttons .login-btn:hover {
+    color: rgb(160, 159, 159);
+    translate: 0rem 0.2rem;
+}
+
+/* Signup Button */
+.auth-buttons .signup-btn {
+    background-color: transparent;
+    color: white;
+    border: 2px solid rgb(162, 162, 162);
+    padding: 8px 10px;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+    transition: color 0.3s ease;
+    transition: translate 0.3s ease;
+}
+
+.auth-buttons .signup-btn:hover {
+    color: rgb(160, 159, 159);
+    border-color: rgb(160, 159, 159);
+    translate: 0rem 0.2rem;
+}
+
+/* Hero Section Styles */
+.hero {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+    text-align: center;
+    padding: 2rem;
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+    pointer-events: none;
+    transform: scale(1); /* default scale */
+}
+
+.hero * {
+    pointer-events: all; /* Allow interactions with input/buttons */
+}
+
+.hero::after {
+    content: "🚀";
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(138, 43, 226, 0.6) 0%, transparent 70%);
+    filter: blur(60px);
+    z-index: -1;
+}
+
+
+
+/* Scroll Animations */
+.quote {
+    font-size: 55px;
+    font-weight: 750;
+    min-width: 50%;
+    max-width: 55%;
+    margin: 0;
+    position: relative;
+    text-align: center;
+}
+.hero p{
+    font-size: 18px;
+}
+        /* Eyes container */
+        .eyes {
+            display: flex;
+            gap: 20px;
+            transition: opacity 0.3s ease;
+        }
+
+        /* Right and Left Eye Box Styles */
+        .right-eye, .left-eye {
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            border-radius: 50%;
+            position: relative;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Inner Eye Styles (Pupils) */
+        .right-inner, .left-inner {
+            width: 40px;
+            height: 40px;
+            background-color: black;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: transform 0.1s ease-out;
+        }
+
+        /* Realistic Light Switch Container */
+        .switch-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 70px;
+            height: 110px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 5px;
+        }
+
+        /* Switch Plate */
+        .switch-plate {
+            width: 100%;
+            height: 100%;
+            background-color: #f8f8f8;
+            border-radius: 8px;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Switch Wrapper */
+        .switch-wrapper {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: all 0.2s ease;
+        }
+
+
+        .sparkling-dots {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1; /* Ensure dots appear in front */
+        }
+        
+        /* Dot style */
+.sparkling-dots .dot {
+    width: 5px;
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.566); /* Slightly transparent white dots */
+    border-radius: 50%;
+    position: absolute;
+    animation: sparkle 5s infinite, move 10s infinite;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.232); /* Adding glow around the dots */
+}
+
+/* Animation for sparkling effect */
+@keyframes sparkle {
+    0% {
+        opacity: 0.5;
+        box-shadow: 0 0 8px rgba(136, 0, 255, 0.7); /* Glow at start */
+    }
+    50% {
+        opacity: 1;
+        box-shadow: 0 0 15px rgb(171, 2, 255); /* Stronger glow in the middle */
+    }
+    100% {
+        opacity: 0.5;
+        box-shadow: 0 0 8px rgba(255, 255, 255, 0.7); /* Glow at end */
+    }
+}
+
+        
+        @keyframes move {
+            0% {
+                transform: translate(0, 0);
+                background-color: white;
+            }
+            100% {
+                transform: translate(calc(50vw - 50%), calc(50vh - 50%)); /* Centered movement */
+                background-color: aliceblue;
+            }
+        }
+        .sparkling-dots .dot:nth-child(1) { animation-delay: 0s; top: 10%; left: 20%; }
+.sparkling-dots .dot:nth-child(2) { animation-delay: 1s; top: 30%; left: 50%; }
+.sparkling-dots .dot:nth-child(3) { animation-delay: 2s; top: 50%; left: 70%; }
+.sparkling-dots .dot:nth-child(4) { animation-delay: 3s; top: 10%; left: 80%; }
+.sparkling-dots .dot:nth-child(5) { animation-delay: 4s; top: 80%; left: 20%; }
+        /* Custom cursor */
+        .cursor {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.5);
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+            transition: transform 0.1s ease;
+        }
+
+
+/* Next Section */
+.next-section {
+    position: relative;
+    margin-top: 100vh;
+    z-index: 1;
+    background: #0d1117;
+    color: white;
+    width: 80%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 60px;
+    min-height: 80vh;
+    font-size: 1rem;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(190, 120, 255, 1); /* Glowing border */
+    backdrop-filter: blur(100em); /* Optional: glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Optional: subtle border */
+}
+
+/* Code Background Animation */
+.code-background {
+    position: absolute;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    color: rgba(34, 255, 0, 0.314);
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.5s ease-in;
+}
+
+/* Add this class when the element is in view */
+.code-background.visible {
+    opacity: 1;
+}
+
+.platform-message {
+    font-size: 18px;
+    font-weight: bold;
+    color: rgba(34, 255, 0, 0.7);
+    margin-bottom: 15px;
+    text-align: center;
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid rgba(34, 255, 0, 0.5);
+}
+
+/* Code lines */
+.code-line {
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid rgba(34, 255, 0, 0.5);
+    margin: 2px 0;
+    width: 0;
+}
+
+/* Keyframes for Typing & Blinking Animation */
+@keyframes typing {
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Add animation class only when element is visible */
+.code-background.visible .platform-message {
+    animation: typing 3s steps(60) 0.5s forwards, blink 0.75s step-end infinite;
+}
+
+/* Typing Animation for Code Lines - with sequential timing */
+.code-background.visible .code-line:nth-child(2) { animation: typing 1.5s steps(50) 3s forwards, blink 0.75s step-end infinite; }
+.code-background.visible .code-line:nth-child(3) { animation: typing 1.5s steps(50) 4s forwards, blink 0.75s step-end infinite; }
+.code-background.visible .code-line:nth-child(4) { animation: typing 1.5s steps(50) 6.5s forwards, blink 0.75s step-end infinite; }
+.code-background.visible .code-line:nth-child(5) { animation: typing 1.5s steps(50) 5s forwards, blink 0.75s step-end infinite; }
+.code-background.visible .code-line:nth-child(6) { animation: typing 1.5s steps(50) 5.5s forwards, blink 0.75s step-end infinite; }
+.code-background.visible .code-line:nth-child(7) { animation: typing 1.5s steps(50) 6s forwards, blink 0.75s step-end infinite; }
+.code-background.visible .code-line:nth-child(8) { animation: typing 1.5s steps(50) 6.5s forwards, blink 0.75s step-end infinite; }
+.code-background.visible .code-line:nth-child(9) { animation: typing 1.5s steps(50) 7s forwards, blink 0.75s step-end infinite; }
+.code-background.visible .code-line:nth-child(10) { animation: typing 1.5s steps(50) 7s forwards, blink 0.75s step-end infinite; }
+.code-background.visible .code-line:nth-child(11) { animation: typing 1.5s steps(50) 7.1s forwards, blink 0.75s step-end infinite; }
+.code-background.visible .code-line:nth-child(12) { animation: typing 1.5s steps(50) 7.5s forwards, blink 0.75s step-end infinite; }
+.code-background.visible .code-line:nth-child(13) { animation: typing 1.5s steps(50) 8s forwards, blink 0.75s step-end infinite; }
+.code-background.visible .code-line:nth-child(14) { animation: typing 1.5s steps(50) 8.5s forwards, blink 0.75s step-end infinite; }
+.code-background.visible .code-line:nth-child(15) { animation: typing 1.5s steps(50) 9s forwards, blink 0.75s step-end infinite; }
+.code-background.visible .code-line:nth-child(16) { animation: typing 1.5s steps(50) 9.5s forwards, blink 0.75s step-end infinite; }
+.code-background.visible .code-line:nth-child(17) { animation: typing 1.5s steps(50) 10s forwards, blink 0.75s step-end infinite; }
+.code-background.visible .code-line:nth-child(18) { animation: typing 1.5s steps(50) 10.5s forwards, blink 0.75s step-end infinite; }
+.code-background.visible .code-line:nth-child(19) { animation: typing 1.5s steps(50) 11s forwards, blink 0.75s step-end infinite; }
+.code-background.visible .code-line:nth-child(20) { animation: typing 1.5s steps(50) 11.5s forwards, blink 0.75s step-end infinite; }
+.code-background.visible .code-line:nth-child(21) { animation: typing 1.5s steps(50) 12s forwards, blink 0.75s step-end infinite; }
+.code-background.visible .code-line:nth-child(22) { animation: typing 1.5s steps(50) 12.5s forwards, blink 0.75s step-end infinite; }
+/* Floating animation for the hero before element */
+@keyframes floaty {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(-20px);
+    }
+}
+.sigupORsignin{
+    width: 80%;
+    margin: 2rem;
+}
+.sigupORsignin .sign-text{
+    width: 15rem;
+    height: 1.2rem;
+    padding: 1rem;
+    border-top-left-radius:1rem;
+    border-bottom-left-radius: 1rem;
+    border-color: white;
+    font-size: 1rem;
+}
+.sigupORsignin .Signup{
+    height: 3.4rem;
+    padding: 1rem;
+    font-family: 800;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    font-size: 1rem;
+    margin-right: 0.8rem;
+    color: white;
+    background-color: rgb(24, 138, 24);
+    border: 3px solid white;
+}
+.sigupORsignin .Signup:hover{
+    transition: background-color 0.4s ease;
+    color: aliceblue;
+    background-color: green;
+}
+
+.sigupORsignin .singin {
+    background-color: transparent;
+    color: white;
+    border: 2px solid rgb(162, 162, 162);
+    padding: 8px 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: border-color 0.3s ease;
+    transition: color 0.3s ease;
+    transition: translate 0.3s ease;
+    height: 3.4rem;
+    width: 7rem;
+    margin-left: 0;
+}
+
+.singin:hover {
+    color: rgb(160, 159, 159);
+    border-color: rgb(160, 159, 159);
+    translate: 0rem 0.2rem;
+}
+/* Third Section */
+.third-section {
+    color: white;
+    width: 90%;
+    padding: 60px;
+    min-height: 80vh;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between; /* Space between content and image */
+    align-items: center;
+}
+.content {
+    flex: 1; /* Take available space */
+    max-width: 55%; /* You can adjust this width if needed */
+    padding-right: 40px; /* Add space between content and image */
+}
+.image {
+    padding: 2rem;
+    animation: floaty 3s ease-in-out infinite; /* Add floating animation */
+}
+@keyframes floaty {
+    0% {
+        transform: translateY(0); /* Start at the normal position */
+    }
+    50% {
+        transform: translateY(-20px); /* Move up 20px */
+    }
+    100% {
+        transform: translateY(0); /* Return to the original position */
+    }
+}
+.image img {
+    border: 9px solid transparent; /* Set the border to transparent */
+    border-image: linear-gradient(to left, purple, rgba(128, 0, 128, 0.433), transparent, rgba(128, 0, 128, 0.727), rgba(110, 0, 110, 0.311)) 14; /* Apply the gradient to the border */
+    max-width: 100%; /* Ensure the image is responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+.content h3{
+font-size: 2rem;
+margin-bottom: 0.6rem;
+}
+.content p{
+    color: rgb(183, 183, 183);
+    margin-top: 0;
+}
+.content .options a {
+    margin-bottom: 1rem;
+    color: rgb(183, 183, 183);
+    display: grid;
+    transition: color 0.5s ease, transform 0.3s ease; /* Combine both transitions */
+    font-size: 1.5rem;
+    border: 2px solid rgba(128, 128, 128, 0.374);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding: 1rem;
+}
+.content .options a:hover {
+    color: white;
+    font-weight: bold;
+}
+.content .options a:hover::after {
+    transform: scaleX(0.5); /* Make the underline appear when hovering */
+    transform-origin: bottom left; /* Makes the underline grow from left to right */
+}
+.content .options .actions{
+    color: rgb(115, 183, 255);
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+}
+/* Fourth Section */
+.fourth-section {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(128, 0, 128, 0.5); 
+    color: rgb(44, 159, 246);
+    width: 80%;
+    padding: 60px;
+    min-height: 80vh;
+    font-size: 1rem;
+    justify-content: space-between; /* Space between content and image */
+    align-items: center;
+    text-align: center;
+    translate: 5rem;
+}
+
+/* Font Awesome Icon */
+.fourth-section i {
+    font-size: 7rem; /* Size of the icon */
+    margin-bottom: 20px; /* Space between the icon and the text */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.679); /* Add a white shadow around the icon */
+    transition: transform 0.3s ease; /* Optional: smooth scaling effect */
+}
+
+.fourth-section i:hover {
+    transform: scale(1.5); /* Optional: slight zoom effect when hovering */
+}
+.fourth-section p{
+    color: #f8f8f8;
+    font-size: 2rem;
+    font-weight: 600;
+}
+.fixes{
+    display: flex;
+    justify-content: space-between;
+    height: 50vh;
+}
+.fixes .first-fix, 
+.fixes .second-fix, 
+.fixes .third-fix {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    border-radius: 8px;
+    padding: 20px;
+    width: 30%; /* Width of each div */
+    min-width: 280px; /* Ensure a minimum width */
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    text-align: left; /* Align text to the left */
+    transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+}
+.fixes .first-fix:hover, 
+.fixes .second-fix:hover, 
+.fixes .third-fix:hover {
+    transform: translateY(-10px); /* Slight lift effect on hover */
+}
+.fixes p {
+    font-size: 2rem;
+    font-weight: 600;
+}
+.fixes p span {
+    display: block; /* Make the span appear on a new line */
+    font-size: 1rem;
+    margin-top: 10px;
+    color: rgba(191, 191, 191, 0.364);
+}
+.fixes a {
+    display: inline-block;
+    margin-top: 15px;
+    color: rgb(44, 159, 246);
+    text-decoration: none; /* No underline by default */
+    font-weight: 600;
+    position: relative; /* Position relative to make the pseudo-element work */
+    transition: color 0.3s ease; /* Transition for text color */
+}
+.fixes a::before {
+    content: ''; /* Required for the pseudo-element */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0; /* Start with no width */
+    height: 2px; /* Thickness of the underline */
+    background-color: rgb(44, 159, 246);; /* Color of the underline */
+    transition: width 0.3s ease; /* Smooth transition for the underline */
+}
+.fixes a:hover {
+    color:rgb(44, 159, 246); /* Change color on hover */
+}
+.fixes a:hover::before {
+    width: 100%; /* Expand the width of the underline to full length */
+}
+.fifth-section{
+    width: 90%;
+    padding: 60px;
+    min-height: 80vh;
+    font-size: 1rem;
+    justify-content: space-between; /* Space between content and image */
+    align-items: center;
+    text-align: center;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.323), rgba(128, 0, 128, 0.296) , transparent,transparent);
+}
+.fifth-section h2{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+.fifth-section p{
+    font-size: 1.5rem;
+    color: rgba(191, 191, 191, 0.644);
+}
+.sixth-section {
+   /* background: radial-gradient(circle, rgba(255, 255, 255, 0.285),rgba(128, 0, 128, 0.279) , transparent,transparent);*/
+    width: 90%;
+    padding: 60px;
+    min-height: 80vh;
+    font-size: 1rem;
+    justify-content: space-between; /* Space between content and image */
+    align-items: center;
+    text-align: center;
+}
+
+#myLineChart {
+    align-items: center;
+    justify-content: center;
+    translate: 20rem;
+    margin-top: 30px;
+    background-color: transparent;
+    border-radius: 10px;
+    max-width: 50%;
+    max-height: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(128, 0, 128, 0.5); 
+    padding: 3rem;
+}
+.sixth-section h2{
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+.sixth-section p{
+    font-size: 1.3rem;
+    color: rgba(191, 191, 191, 0.644);
+    margin-top: 2rem;
+}
+footer {
+background: linear-gradient(to bottom, rgba(1, 1, 110, 0.29),rgba(128, 0, 128, 0.279) , rgba(128, 0, 128, 0.378),transparent);
+   background-color: rgba(69, 68, 68, 0.101);
+    color: #fff;
+    padding: 40px;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 15rem;
+  }
+  
+  .footer-logo {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+  .social-media-icons{
+    min-width: 8%;
+    color: #fff;
+  }
+  .social-media-icons a {
+    margin-right: 15px;
+    translate: 0rem 15rem;
+    display: inline-block;
+  }
+  
+  .social-media-icons i {
+    font-size: 1.2rem;
+    color: #fff;
+  }
+  
+  .footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 100%;
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .column h4 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .column ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .column ul li {
+    margin-bottom: 8px;
+  }
+  
+  .column ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .column ul li a:hover {
+    text-decoration: underline;
+  }
+  
+/* Add this to your CSS file (landing.css or another appropriate file) */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section {
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.5s ease; /* Animation properties */
+}
+
+.section.visible {
+    opacity: 1; /* Make it visible */
+}
