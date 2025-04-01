@@ -14,38 +14,29 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
-    @GetMapping("/register")
-    public String showRegisterForm(Model model) {
+    // Serve the combined auth page (login + register)
+    @GetMapping("/")
+    public String showAuthPage(Model model) {
         model.addAttribute("user", new User());
-        return "register";
+        return "auth";
     }
 
     @PostMapping("/register")
-    public String register(@ModelAttribute User user) {
+    public String register(@ModelAttribute User user, Model model) {
         user.setPassword(BCrypt.hashpw(user.getPassword(), BCrypt.gensalt()));
         userRepository.save(user);
-        return "redirect:/login";
-    }
-
-    @GetMapping("/login")
-    public String showLoginForm(Model model) {
-        model.addAttribute("user", new User());
-        return "login";
+        model.addAttribute("message", "Registration successful! You can now log in.");
+        return "auth";
     }
 
     @PostMapping("/login")
     public String login(@ModelAttribute User user, Model model) {
         User foundUser = userRepository.findByUsername(user.getUsername());
         if (foundUser != null && BCrypt.checkpw(user.getPassword(), foundUser.getPassword())) {
-            return "redirect:/users";
+            model.addAttribute("username", foundUser.getUsername());
+            return "welcome"; // Redirect to welcome.html
         }
-        model.addAttribute("error", "Invalid username or password");
-        return "login";
-    }
-
-    @GetMapping("/users")
-    public String listUsers(Model model) {
-        model.addAttribute("users", userRepository.findAll());
-        return "list";
+        model.addAttribute("error", "Invalid username or password.");
+        return "auth";
     }
 }
