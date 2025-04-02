@@ -97,12 +97,23 @@
 
     h2 {
       font-size: 1.8rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
     }
 
     form {
-      display: flex;
+      display: none;
       flex-direction: column;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.4s ease;
+      pointer-events: none;
+    }
+
+    form.active {
+      display: flex;
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
     }
 
     label {
@@ -164,6 +175,7 @@
       .container {
         flex-direction: column;
       }
+
       .divider {
         display: none;
       }
@@ -187,12 +199,12 @@
     <div class="right">
       <h2 id="form-title">Login</h2>
 
-      <div class="message">
-        <span th:text="${message}"></span>
-        <span th:text="${error}"></span>
-      </div>
-
-      <form id="login-form" method="post" action="/login">
+      <!-- Login Form -->
+      <form id="login-form" method="post" action="/login" class="active">
+        <div class="message">
+          <span th:text="${message}"></span>
+          <span th:text="${error}"></span>
+        </div>
         <label for="username">Username or Email</label>
         <input type="text" name="username" id="username" placeholder="Enter username or email" required>
 
@@ -204,7 +216,12 @@
         <p class="text-small">Need an account? <a href="#" onclick="showRegister()">Sign up now!</a></p>
       </form>
 
-      <form id="register-form" method="post" action="/register" style="display: none;">
+      <!-- Register Form -->
+      <form id="register-form" method="post" action="/register">
+        <div class="message">
+          <span th:text="${message}"></span>
+          <span th:text="${error}"></span>
+        </div>
         <label for="reg-user">Username</label>
         <input type="text" name="username" id="reg-user" placeholder="Enter username" required>
 
@@ -222,15 +239,25 @@
 
   <script>
     function showRegister() {
-      document.getElementById('login-form').style.display = 'none';
-      document.getElementById('register-form').style.display = 'flex';
+      document.getElementById('login-form').classList.remove('active');
+      document.getElementById('register-form').classList.add('active');
       document.getElementById('form-title').innerText = 'Register';
     }
 
     function showLogin() {
-      document.getElementById('register-form').style.display = 'none';
-      document.getElementById('login-form').style.display = 'flex';
+      document.getElementById('register-form').classList.remove('active');
+      document.getElementById('login-form').classList.add('active');
       document.getElementById('form-title').innerText = 'Login';
+    }
+
+    // Auto-switch from backend validation
+    window.onload = function () {
+      const showForm = /*[[${showForm}]]*/ 'login'; // default fallback
+      if (showForm === 'register') {
+        showRegister();
+      } else {
+        showLogin();
+      }
     }
   </script>
 </body>
