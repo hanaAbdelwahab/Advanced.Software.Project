@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Profile</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/Profile.css">
+
+</head>
+<body>
+    <div class="container profile-container">
+        <div class="profile-header text-center">
+            <img src="images/profile1.png" alt="Profile Picture" class="profile-img">
+
+
+
+            <h1 class="username">John Emil</h1>
+            <p>Passionate code reviewer and software <br>architect with a keen eye for clean,<br> efficient, and  scalable code.  <br>Experienced in multiple<br> programming languages🚀</p>
+            <button class="edit-btn">Edit Profile</button>
+            <div class="line-after-button"></div>
+        </div>
+        
+        
+        <div class="right-section">
+            <div class="repositories">
+                <h2>Popular Code</h2>
+                <div class="repo-grid">
+                    <div class="repo-card">
+                        <div class="repo-title">CodeRacer</div>
+                        <div class="repo-circle"></div>
+                        <div class="public-label">Public</div>  <div class="repo-circle"></div>
+                        <div class="repo-stats">⭐ 120 | ⏳ Updated 2 days ago</div>
+                    </div>
+                    <div class="repo-card">
+                        <div class="repo-title">AIChess (HTML)</div>
+                        <div class="repo-circle"></div>
+                        <div class="public-label">Public</div>  <div class="repo-circle"></div>
+                        <div class="repo-stats">⭐ 98 | ⏳ Updated 5 days ago</div>
+                    </div>
+                    <div class="repo-card">
+                        <div class="repo-title">NetworkMonitor  (PHP)</div>
+                        <div class="repo-circle"></div>
+                        <div class="public-label">Public</div>  <div class="repo-circle"></div>
+                        <div class="repo-stats">⭐ 75 | ⏳ Updated 1 week ago</div>
+                    </div>
+                    <div class="repo-card">
+                        <div class="repo-title">AutoBackup (PHP)</div>
+                        <div class="repo-circle"></div>
+                        <div class="public-label">Public</div>  <div class="repo-circle"></div>
+                        <div class="repo-stats">⭐ 65 | ⏳ Updated 3 days ago</div>
+                    </div>
+                    <div class="repo-card">
+                        <div class="repo-title">MazeRunner</div>
+                        <div class="repo-circle"></div>
+                        <div class="public-label">Public</div>  <div class="repo-circle"></div>
+                        <div class="repo-stats">⭐ 80 | ⏳ Updated 6 days ago</div>
+                    </div>
+                </div>
+            </div>
+            <div class="tips-section">
+                <h2>Tips Section 🎓 (Reviewer’s advice on clean coding)</h2>
+                <p>
+                    Here are some tips for writing clean and maintainable code:
+                    <ul>
+                        <li><strong>Use meaningful variable and function names.</strong></li>
+                        <li><strong>Keep functions short and focused.</strong></li>
+                        <li><strong>Write clear and concise comments.</strong></li>
+                        <li><strong>Follow consistent coding style and conventions.</strong></li>
+                        <li><strong>Refactor code regularly.</strong></li>
+                    </ul>
+                </p>
+            </div>
+            <div class="line-after-tips"></div>
+            <div class="contributions">
+                <h2>Contribution Graph</h2>
+                
+                <!-- Months Labels (Exactly like GitHub) -->
+                <div class="months">
+                    <span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span>
+                    <span>May</span><span>Jun</span><span>Jul</span><span>Aug</span>
+                    <span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span>
+                </div>
+            
+                <!-- Contribution Graph -->
+                <div class="contribution-graph">
+                    <!-- Weekday Labels -->
+                    <div class="weekdays">
+                        <span>Mon</span>
+                        <span>Wed</span>
+                        <span>Fri</span>
+                    </div>
+                    
+                    <div class="grid">
+                        <!-- Generating the graph dynamically using JavaScript -->
+                        <script>
+                            let weeks = 53;  // GitHub has 53 weeks in the graph
+                            let daysPerWeek = 7;
+                        
+                            for (let day = 0; day < daysPerWeek; day++) {
+                                for (let week = 0; week < weeks; week++) {
+                                    let activityLevel;
+                        
+                                    // 70% chance to be level-0 (black), 30% chance for green
+                                    let random = Math.random();
+                                    if (random < 0.7) {
+                                        activityLevel = 0; // Black square
+                                    } else if (random < 0.8) {
+                                        activityLevel = 1; // Light green
+                                    } else if (random < 0.9) {
+                                        activityLevel = 2; // Medium green
+                                    } else if (random < 0.95) {
+                                        activityLevel = 3; // Darker green
+                                    } else {
+                                        activityLevel = 4; // Brightest green
+                                    }
+                        
+                                    document.write('<div class="contribution-square level-' + activityLevel + '"></div>');
+                                }
+                            }
+                        </script>
+                        
+                    </div>
+                </div>
+                <div class="contribution-scale">
+                    <span>Less</span>
+                    <div class="scale-box less"></div>
+                    <div class="scale-box mid"></div>
+                    <div class="scale-box more"></div>
+                    <span>More</span>
+                </div>
+            </div>
+            
+            
+        
+</body>
+</html>
