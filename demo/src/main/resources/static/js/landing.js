@@ -103,7 +103,7 @@ window.addEventListener('scroll', () => {
     // Scale down slightly (from 1 to 0.94)
     const scale = 1 - progress * 0.06;
     hero.style.transform = `scale(${scale})`;
-
+///
     // Check if code background is in view
     const codeBackground = document.querySelector('.code-background');
     const nextSection = document.querySelector('.next-section');
