@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Showcase | Professional Examples</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dark-mode">
+<div class="toast-container" id="toastContainer"></div>
+
+<header>
+    <div class="container header-content">
+        <a href="#" class="logo">
+            <div class="logo-icon">&lt;/&gt;</div>
+            <span>CodeShowcase</span>
+        </a>
+        
+        <!-- Dynamic Navigation Bar -->
+        <nav class="main-nav">
+            <ul class="nav-links">
+                <li><a href="#" class="nav-link active">Codes</a></li>
+                <li><a href="#" class="nav-link">Trending</a></li>
+                <li><a href="#" class="nav-link">Your Code</a></li>
+                <li><a href="#" class="nav-link">Dashboard</a></li>
+                <li class="user-status">
+                    <div id="userStatusBadge" class="user-badge free">Free</div>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="header-actions">
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search code examples...">
+                <div class="search-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+            <div class="notification-bell">
+                <i class="fas fa-bell"></i>
+                <span class="notification-badge" id="notificationBadge">0</span>
+            </div>
+            <div class="user-menu">
+                <button id="userMenuBtn" class="user-menu-btn">
+                    <img src="https://ui-avatars.com/api/?name=User&background=4361ee&color=fff" alt="User" class="user-avatar">
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="user-dropdown">
+                    <div class="user-dropdown-header">
+                        <img src="https://ui-avatars.com/api/?name=User&background=4361ee&color=fff" alt="User" class="user-avatar-lg">
+                        <div class="user-info">
+                            <div class="user-name">User Name</div>
+                            <div class="user-email">user@example.com</div>
+                            <div class="user-plan" id="userPlanDisplay">Free Plan</div>
+                        </div>
+                    </div>
+                    <ul class="user-dropdown-menu">
+                        <li><a href="#"><i class="fas fa-user"></i> Profile</a></li>
+                        <li><a href="#"><i class="fas fa-code"></i> My Codes</a></li>
+                        <li><a href="#"><i class="fas fa-heart"></i> Favorites</a></li>
+                        <li><a href="#" id="upgradeLink" class="upgrade-link"><i class="fas fa-crown"></i> <span id="upgradeText">Upgrade to Pro</span></a></li>
+                        <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Pro Banner (visible only for free users) -->
+    <div class="pro-banner" id="proBanner">
+        <div class="container">
+            <div class="pro-banner-content">
+                <div class="pro-banner-text">
+                    <strong>Upgrade to Pro</strong> to access premium code examples and earn money from your code
+                </div>
+                <button class="pro-banner-btn" id="proBannerBtn">Get Pro</button>
+                <button class="pro-banner-close" id="proBannerClose">&times;</button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="container">
+        <h1 class="section-title">Interactive Code Examples</h1>
+        <p class="section-subtitle">Explore a collection of professional code examples with interactive previews. Click on any card to view the full code and explanation.</p>
+
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="javascript">JavaScript</button>
+            <button class="filter-btn" data-filter="css">CSS</button>
+            <button class="filter-btn" data-filter="animation">Animation</button>
+            <button class="filter-btn" data-filter="interactive">Interactive</button>
+            <button class="filter-btn" data-filter="api">API</button>
+        </div>
+
+        <div class="code-grid">
+            <!-- Interactive Counter (FREE) -->
+            <div class="code-card" data-id="counter" data-categories="javascript,interactive">
+                <div class="card-header">
+                    <span class="card-category">JavaScript</span>
+                    <h3 class="card-title">Interactive Counter</h3>
+                    <p class="card-description">A customizable counter with smooth animations and event handling.</p>
+                </div>
+                <div class="card-body">
+                    <div class="card-preview">
+                        <div class="counter-example">
+                            <div class="counter-display">0</div>
+                            <div class="counter-buttons">
+                                <button class="counter-btn">-</button>
+                                <button class="counter-btn">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="card-meta">
+                        <div class="card-meta-item">
+                            <i class="fas fa-level-up-alt"></i>
+                            <span>Beginner</span>
+                        </div>
+                    </div>
+                    <button class="view-btn">View Code</button>
+                </div>
+                <div class="social-bar">
+                    <div class="social-action like-btn" data-id="counter">
+                        <i class="far fa-heart"></i>
+                        <span class="social-count like-count">0</span>
+                    </div>
+                    <div class="social-action comment-btn" data-id="counter">
+                        <i class="far fa-comment"></i>
+                        <span class="social-count comment-count">0</span>
+                    </div>
+                    <div class="social-views">
+                        <i class="fas fa-eye"></i>
+                        <span>15</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Advanced Todo App (FREE) -->
+            <div class="code-card" data-id="todo" data-categories="javascript,interactive">
+                <div class="card-header">
+                    <span class="card-category">JavaScript</span>
+                    <h3 class="card-title">Advanced Todo App</h3>
+                    <p class="card-description">A feature-rich todo application with local storage and drag-and-drop.</p>
+                </div>
+                <div class="card-body">
+                    <div class="card-preview">
+                        <div class="todo-app">
+                            <div class="todo-header">
+                                <input type="text" class="todo-input" placeholder="Add a new task...">
+                                <button class="todo-add-btn">Add</button>
+                            </div>
+                            <ul class="todo-list">
+                                <li class="todo-item">
+                                    <input type="checkbox" class="todo-checkbox">
+                                    <span class="todo-text">Complete the project</span>
+                                    <button class="todo-delete">×</button>
+                                </li>
+                                <li class="todo-item todo-completed">
+                                    <input type="checkbox" class="todo-checkbox" checked>
+                                    <span class="todo-text">Design the UI</span>
+                                    <button class="todo-delete">×</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="card-meta">
+                        <div class="card-meta-item">
+                            <i class="fas fa-level-up-alt"></i>
+                            <span>Intermediate</span>
+                        </div>
+                    </div>
+                    <button class="view-btn">View Code</button>
+                </div>
+                <div class="social-bar">
+                    <div class="social-action like-btn" data-id="todo">
+                        <i class="far fa-heart"></i>
+                        <span class="social-count like-count">2</span>
+                    </div>
+                    <div class="social-action comment-btn" data-id="todo">
+                        <i class="far fa-comment"></i>
+                        <span class="social-count comment-count">1</span>
+                    </div>
+                    <div class="social-views">
+                        <i class="fas fa-eye"></i>
+                        <span>23</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image Gallery with Transitions (FREE) -->
+            <div class="code-card" data-id="gallery" data-categories="javascript,css,animation">
+                <div class="card-header">
+                    <span class="card-category">CSS & JavaScript</span>
+                    <h3 class="card-title">Image Gallery</h3>
+                    <p class="card-description">A responsive image gallery with smooth transitions and keyboard navigation.</p>
+                </div>
+                <div class="card-body">
+                    <div class="card-preview">
+                        <div class="image-gallery">
+                            <div class="gallery-container">
+                                <div class="gallery-slide active">Slide 1</div>
+                                <div class="gallery-slide">Slide 2</div>
+                                <div class="gallery-slide">Slide 3</div>
+                            </div>
+                            <div class="gallery-controls">
+                                <button class="btn btn-outline">Previous</button>
+                                <button class="btn btn-outline">Next</button>
+                            </div>
+                            <div class="gallery-dots">
+                                <span class="gallery-dot active"></span>
+                                <span class="gallery-dot"></span>
+                                <span class="gallery-dot"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="card-meta">
+                        <div class="card-meta-item">
+                            <i class="fas fa-level-up-alt"></i>
+                            <span>Intermediate</span>
+                        </div>
+                    </div>
+                    <button class="view-btn">View Code</button>
+                </div>
+                <div class="social-bar">
+                    <div class="social-action like-btn" data-id="gallery">
+                        <i class="far fa-heart"></i>
+                        <span class="social-count like-count">3</span>
+                    </div>
+                    <div class="social-action comment-btn" data-id="gallery">
+                        <i class="far fa-comment"></i>
+                        <span class="social-count comment-count">2</span>
+                    </div>
+                    <div class="social-views">
+                        <i class="fas fa-eye"></i>
+                        <span>18</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Color Picker (PRO) -->
+            <div class="code-card premium-code" data-id="color-picker" data-categories="javascript,css,interactive">
+                <div class="card-header">
+                    <span class="card-category">Interactive</span>
+                    <div class="premium-badge"><i class="fas fa-crown"></i> PRO</div>
+                    <h3 class="card-title">Color Picker</h3>
+                    <p class="card-description">A customizable RGB color picker with real-time preview.</p>
+                </div>
+                <div class="card-body">
+                    <div class="card-preview">
+                        <div class="color-picker">
+                            <div class="color-display" style="background-color: rgb(67, 97, 238);"></div>
+                            <div class="color-controls">
+                                <span>R</span>
+                                <input type="range" min="0" max="255" value="67" class="color-slider">
+                                <span id="redValue">67</span>
+                            </div>
+                            <div class="color-controls">
+                                <span>G</span>
+                                <input type="range" min="0" max="255" value="97" class="color-slider">
+                                <span id="greenValue">97</span>
+                            </div>
+                            <div class="color-controls">
+                                <span>B</span>
+                                <input type="range" min="0" max="255" value="238" class="color-slider">
+                                <span id="blueValue">238</span>
+                            </div>
+                            <div class="color-value">#4361ee</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="card-meta">
+                        <div class="card-meta-item">
+                            <i class="fas fa-level-up-alt"></i>
+                            <span>Beginner</span>
+                        </div>
+                    </div>
+                    <button class="view-btn premium-btn">
+                        <i class="fas fa-lock"></i> Unlock
+                    </button>
+                </div>
+                <div class="social-bar">
+                    <div class="social-action like-btn" data-id="color-picker">
+                        <i class="far fa-heart"></i>
+                        <span class="social-count like-count">5</span>
+                    </div>
+                    <div class="social-action comment-btn" data-id="color-picker">
+                        <i class="far fa-comment"></i>
+                        <span class="social-count comment-count">3</span>
+                    </div>
+                    <div class="social-views">
+                        <i class="fas fa-eye"></i>
+                        <span>27</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Weather API (PRO) -->
+            <div class="code-card premium-code" data-id="weather" data-categories="javascript,api">
+                <div class="card-header">
+                    <span class="card-category">API</span>
+                    <div class="premium-badge"><i class="fas fa-crown"></i> PRO</div>
+                    <h3 class="card-title">Weather App</h3>
+                    <p class="card-description">Fetch and display weather data from a public API.</p>
+                </div>
+                <div class="card-body">
+                    <div class="card-preview">
+                        <div class="weather-app">
+                            <div class="weather-search">
+                                <input type="text" class="weather-input" placeholder="Enter city name...">
+                                <button class="weather-btn">Search</button>
+                            </div>
+                            <div class="weather-result">
+                                <div class="weather-city">New York</div>
+                                <div class="weather-temp">72°F</div>
+                                <div class="weather-desc">Partly Cloudy</div>
+                                <div class="weather-details">
+                                    <div class="weather-detail">
+                                        <div class="weather-detail-label">Humidity</div>
+                                        <div class="weather-detail-value">65%</div>
+                                    </div>
+                                    <div class="weather-detail">
+                                        <div class="weather-detail-label">Wind</div>
+                                        <div class="weather-detail-value">5 mph</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="card-meta">
+                        <div class="card-meta-item">
+                            <i class="fas fa-level-up-alt"></i>
+                            <span>Intermediate</span>
+                        </div>
+                    </div>
+                    <button class="view-btn premium-btn">
+                        <i class="fas fa-lock"></i> Unlock
+                    </button>
+                </div>
+                <div class="social-bar">
+                    <div class="social-action like-btn" data-id="weather">
+                        <i class="far fa-heart"></i>
+                        <span class="social-count like-count">1</span>
+                    </div>
+                    <div class="social-action comment-btn" data-id="weather">
+                        <i class="far fa-comment"></i>
+                        <span class="social-count comment-count">0</span>
+                    </div>
+                    <div class="social-views">
+                        <i class="fas fa-eye"></i>
+                        <span>12</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Visualization (FREE) -->
+            <div class="code-card" data-id="chart" data-categories="javascript,interactive">
+                <div class="card-header">
+                    <span class="card-category">Data Visualization</span>
+                    <h3 class="card-title">Interactive Chart</h3>
+                    <p class="card-description">A responsive bar chart with interactive tooltips and animations.</p>
+                </div>
+                <div class="card-body">
+                    <div class="card-preview">
+                        <div class="chart-container">
+                            <div class="chart-bar" style="height: 60%;" data-value="60">
+                                <div class="chart-tooltip">Q1: 60%</div>
+                            </div>
+                            <div class="chart-bar" style="height: 80%;" data-value="80">
+                                <div class="chart-tooltip">Q2: 80%</div>
+                            </div>
+                            <div class="chart-bar" style="height: 45%;" data-value="45">
+                                <div class="chart-tooltip">Q3: 45%</div>
+                            </div>
+                            <div class="chart-bar" style="height: 90%;" data-value="90">
+                                <div class="chart-tooltip">Q4: 90%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="card-meta">
+                        <div class="card-meta-item">
+                            <i class="fas fa-level-up-alt"></i>
+                            <span>Intermediate</span>
+                        </div>
+                    </div>
+                    <button class="view-btn">View Code</button>
+                </div>
+                <div class="social-bar">
+                    <div class="social-action like-btn" data-id="chart">
+                        <i class="far fa-heart"></i>
+                        <span class="social-count like-count">7</span>
+                    </div>
+                    <div class="social-action comment-btn" data-id="chart">
+                        <i class="far fa-comment"></i>
+                        <span class="social-count comment-count">4</span>
+                    </div>
+                    <div class="social-views">
+                        <i class="fas fa-eye"></i>
+                        <span>32</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form Validation (PRO) -->
+            <div class="code-card premium-code" data-id="form" data-categories="javascript,interactive">
+                <div class="card-header">
+                    <span class="card-category">Form Validation</span>
+                    <div class="premium-badge"><i class="fas fa-crown"></i> PRO</div>
+                    <h3 class="card-title">Smart Form</h3>
+                    <p class="card-description">A form with real-time validation and custom error messages.</p>
+                </div>
+                <div class="card-body">
+                    <div class="card-preview">
+                        <div class="form-example">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Email">
+                                <div class="form-error">Please enter a valid email</div>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" placeholder="Password">
+                                <div class="form-error">Password must be at least 8 characters</div>
+                            </div>
+                            <button class="form-submit">Submit</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="card-meta">
+                        <div class="card-meta-item">
+                            <i class="fas fa-level-up-alt"></i>
+                            <span>Advanced</span>
+                        </div>
+                    </div>
+                    <button class="view-btn premium-btn">
+                        <i class="fas fa-lock"></i> Unlock
+                    </button>
+                </div>
+                <div class="social-bar">
+                    <div class="social-action like-btn" data-id="form">
+                        <i class="far fa-heart"></i>
+                        <span class="social-count like-count">9</span>
+                    </div>
+                    <div class="social-action comment-btn" data-id="form">
+                        <i class="far fa-comment"></i>
+                        <span class="social-count comment-count">5</span>
+                    </div>
+                    <div class="social-views">
+                        <i class="fas fa-eye"></i>
+                        <span>41</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Animated Loader (FREE) -->
+            <div class="code-card" data-id="loader" data-categories="css,animation">
+                <div class="card-header">
+                    <span class="card-category">CSS Animation</span>
+                    <h3 class="card-title">Animated Loaders</h3>
+                    <p class="card-description">A collection of pure CSS loading animations for your projects.</p>
+                </div>
+                <div class="card-body">
+                    <div class="card-preview">
+                        <div class="loader-container">
+                            <div class="loader-item spinner"></div>
+                            <div class="loader-item pulse"></div>
+                            <div class="loader-item dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="card-meta">
+                        <div class="card-meta-item">
+                            <i class="fas fa-level-up-alt"></i>
+                            <span>Beginner</span>
+                        </div>
+                    </div>
+                    <button class="view-btn">View Code</button>
+                </div>
+                <div class="social-bar">
+                    <div class="social-action like-btn" data-id="loader">
+                        <i class="far fa-heart"></i>
+                        <span class="social-count like-count">12</span>
+                    </div>
+                    <div class="social-action comment-btn" data-id="loader">
+                        <i class="far fa-comment"></i>
+                        <span class="social-count comment-count">3</span>
+                    </div>
+                    <div class="social-views">
+                        <i class="fas fa-eye"></i>
+                        <span>38</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Modal -->
+<div class="modal-overlay" id="codeModal">
+    <div class="modal">
+        <div class="modal-header">
+            <h2 class="modal-title">Interactive Counter</h2>
+            <p class="modal-subtitle">A customizable counter with smooth animations and event handling.</p>
+            <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="modal-tabs">
+                <div class="modal-tab active" data-tab="code">Code</div>
+                <div class="modal-tab" data-tab="result">Result</div>
+                <div class="modal-tab" data-tab="explanation">Explanation</div>
+            </div>
+            
+            <!-- Code Tab -->
+            <div class="modal-content active" data-content="code">
+                <div class="code-content-wrapper">
+                    <!-- Pro Upgrade Overlay for Free Users -->
+                    <div class="code-pro-overlay" id="codeProOverlay">
+                        <div class="code-pro-overlay-content">
+                            <i class="fas fa-lock code-pro-icon"></i>
+                            <h3>Code Access is a Pro Feature</h3>
+                            <p>Upgrade to Pro to view and copy the code for all examples</p>
+                            <button class="code-pro-btn" id="codeProBtn">Upgrade to Pro</button>
+                        </div>
+                    </div>
+                    
+                    <div class="code-block">
+                        <div class="code-header">
+                            <div class="code-language">
+                                <i class="fab fa-html5"></i>
+                                <span>HTML</span>
+                            </div>
+                            <div class="code-actions">
+                                <button class="code-action-btn copy-btn" data-code-type="html">
+                                    <i class="far fa-copy"></i>
+                                    <span>Copy</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="code-content">
+                            <pre><code class="language-html">&lt;div class="counter-example"&gt;
+    &lt;div class="counter-display"&gt;0&lt;/div&gt;
+    &lt;div class="counter-buttons"&gt;
+        &lt;button class="counter-btn"&gt;-&lt;/button&gt;
+        &lt;button class="counter-btn"&gt;+&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="code-block mt-3">
+                        <div class="code-header">
+                            <div class="code-language">
+                                <i class="fab fa-css3-alt"></i>
+                                <span>CSS</span>
+                            </div>
+                            <div class="code-actions">
+                                <button class="code-action-btn copy-btn" data-code-type="css">
+                                    <i class="far fa-copy"></i>
+                                    <span>Copy</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="code-content">
+                            <pre><code class="language-css">.counter-example {
+    text-align: center;
+    padding: 0.8rem;
+}
+
+.counter-display {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+    color: var(--primary);
+}
+
+.counter-buttons {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.counter-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--primary);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.counter-btn:hover {
+    background-color: var(--primary-dark);
+    transform: scale(1.1);
+}</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="code-block mt-3">
+                        <div class="code-header">
+                            <div class="code-language">
+                                <i class="fab fa-js"></i>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="code-actions">
+                                <button class="code-action-btn copy-btn" data-code-type="js">
+                                    <i class="far fa-copy"></i>
+                                    <span>Copy</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="code-content">
+                            <pre><code class="language-javascript">document.addEventListener('DOMContentLoaded', function() {
+    const counterDisplay = document.querySelector('.counter-display');
+    const counterButtons = document.querySelectorAll('.counter-btn');
+    
+    let count = 0;
+    
+    // Update the display
+    function updateDisplay() {
+        counterDisplay.textContent = count;
+        // Add animation
+        counterDisplay.animate([
+            { transform: 'scale(1.2)' },
+            { transform: 'scale(1)' }
+        ], {
+            duration: 200,
+            easing: 'ease-out'
+        });
+    }
+    
+    // Add event listeners to buttons
+    counterButtons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+            // First button decreases, second increases
+            if (index === 0) {
+                count--;
+            } else {
+                count++;
+            }
+            updateDisplay();
+        });
+    });
+});</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Result Tab -->
+            <div class="modal-content" data-content="result">
+                <div class="result-container">
+                    <h3 class="result-title">Live Preview</h3>
+                    <div class="result-content" id="result-preview">
+                        <!-- Dynamic content will be loaded here -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Explanation Tab -->
+            <div class="modal-content" data-content="explanation">
+                <div class="explanation-wrapper">
+                    <div class="explanation-main">
+                        <div class="explanation">
+                            <h3 class="explanation-title">How It Works</h3>
+                            <div class="explanation-content">
+                                <p>This interactive counter is a simple yet effective example of DOM manipulation with JavaScript. It demonstrates event handling, animations, and state management in a clean, minimalist interface.</p>
+                                
+                                <p>The counter consists of three main components:</p>
+                                <ul>
+                                    <li>A display area that shows the current count</li>
+                                    <li>A decrement button (-) that reduces the count by 1</li>
+                                    <li>An increment button (+) that increases the count by 1</li>
+                                </ul>
+                                
+                                <p>When a user clicks either button, the JavaScript code updates the count variable and then refreshes the display. A subtle scale animation is applied to provide visual feedback to the user that their action has been registered.</p>
+                                
+                                <p>The code uses modern JavaScript features like arrow functions and the Web Animations API for the smooth scaling effect. The styling is handled with CSS variables for easy theming and customization.</p>
+                                
+                                <p>This pattern can be extended to create more complex counters with additional features like:</p>
+                                <ul>
+                                    <li>Setting minimum and maximum values</li>
+                                    <li>Adding a reset button</li>
+                                    <li>Implementing step values (e.g., count by 5 or 10)</li>
+                                    <li>Saving the count to localStorage for persistence</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="explanation-sidebar">
+                        <!-- Like and Review Section -->
+                        <div class="like-review-section">
+                            <div class="like-container">
+                                <button class="like-btn" data-id="counter">
+                                    <i class="far fa-heart"></i>
+                                    <span>Like</span>
+                                </button>
+                                <span class="like-count">0</span>
+                            </div>
+                            <div class="review-container">
+                                <div class="review-header">
+                                    <h4 class="review-title">Reviews</h4>
+                                    <span class="review-count">0 reviews</span>
+                                </div>
+                                <form class="review-form">
+                                    <textarea class="review-input" placeholder="Write your review..." data-id="global-reviews"></textarea>
+                                    <button type="submit" class="review-submit">Submit Review</button>
+                                </form>
+                                <ul class="reviews-list" id="global-reviews-list">
+                                    <!-- Reviews will be added dynamically -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Pro Upgrade Modal -->
+<div class="modal-overlay" id="proUpgradeModal">
+    <div class="modal pro-modal">
+        <div class="modal-header">
+            <h2 class="modal-title">Upgrade to Pro</h2>
+            <p class="modal-subtitle">Unlock premium features and earn money from your code</p>
+            <button class="modal-close" id="proModalClose">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="pro-plans">
+                <div class="pro-plan">
+                    <div class="pro-plan-header">
+                        <h3 class="pro-plan-title">Monthly</h3>
+                        <div class="pro-plan-price">$9.99<span>/month</span></div>
+                    </div>
+                    <ul class="pro-plan-features">
+                        <li><i class="fas fa-check"></i> Access all premium code</li>
+                        <li><i class="fas fa-check"></i> Earn 70% on your code sales</li>
+                        <li><i class="fas fa-check"></i> Priority support</li>
+                        <li><i class="fas fa-check"></i> No watermarks</li>
+                    </ul>
+                    <button class="pro-plan-btn" id="monthlyPlanBtn">Choose Plan</button>
+                </div>
+                <div class="pro-plan featured">
+                    <div class="pro-plan-badge">Best Value</div>
+                    <div class="pro-plan-header">
+                        <h3 class="pro-plan-title">Yearly</h3>
+                        <div class="pro-plan-price">$89.99<span>/year</span></div>
+                        <div class="pro-plan-save">Save 25%</div>
+                    </div>
+                    <ul class="pro-plan-features">
+                        <li><i class="fas fa-check"></i> Access all premium code</li>
+                        <li><i class="fas fa-check"></i> Earn 80% on your code sales</li>
+                        <li><i class="fas fa-check"></i> Priority support</li>
+                        <li><i class="fas fa-check"></i> No watermarks</li>
+                        <li><i class="fas fa-check"></i> Early access to new features</li>
+                    </ul>
+                    <button class="pro-plan-btn" id="yearlyPlanBtn">Choose Plan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../static/js/script.js"></script>
+</body>
+</html>
