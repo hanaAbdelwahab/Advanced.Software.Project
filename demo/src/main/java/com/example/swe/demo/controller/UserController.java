@@ -14,11 +14,12 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
-    // Serve the combined auth page (login + register)
     @GetMapping("/")
-    public String showLandingPage() {
-    return "LandingPage"; // Ensure landingpage.html exists in src/main/resources/templates/
+    public String showCodeListPage() {
+    return "CodeList"; // Ensure landingpage.html exists in src/main/resources/templates/
     }
+    // Serve the combined auth page (login + register)
+   
     @GetMapping("/auth")
     public String showAuthPage() {
     return "auth"; // Ensure landingpage.html exists in src/main/resources/templates/
@@ -36,7 +37,7 @@ public class UserController {
         User foundUser = userRepository.findByUsername(user.getUsername());
         if (foundUser != null && BCrypt.checkpw(user.getPassword(), foundUser.getPassword())) {
             model.addAttribute("username", foundUser.getUsername());
-            return "welcome"; // Redirect to welcome.html
+            return "Dashboard"; // Redirect to welcome.html
         }
         model.addAttribute("error", "Invalid username or password.");
         return "auth";
