@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Details</title>
+  <link rel="stylesheet" href="css/codeDetails.css">
+  <!-- Syntax highlighting library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+</head>
+<body>
+  <!-- Empty container that will be filled by JavaScript -->
+  <div id="app-container">
+    <div class="loading-container">
+      <div class="loader"></div>
+      <p>Loading code details...</p>
+    </div>
+  </div>
+
+  <!-- Script containing all the functionality -->
+  <script src="js/codeDetails.js"></script>
+  <script>
+    // Initialize the details page when loaded
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.location.pathname.includes('code-details.html')) {
+        createCodeDetailsPage();
+      }
+    });
+  </script>
+</body>
+</html>

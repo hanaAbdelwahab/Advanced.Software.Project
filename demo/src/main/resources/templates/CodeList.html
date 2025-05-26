@@ -3,42 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="stylesheet" href="css/CodeList.css">
+<link rel="stylesheet" href="css/codeDetails.css">
 <title>Code Showcase | Professional Examples</title>
 
 </head>
 <body>
-<div class="toast-container"></div>
 
-<header>
-    <div class="container">
-        <div class="header-content">
-            <a href="#" class="logo">
-                <div class="logo-icon">&lt;/&gt;</div>
-                <span>CodeShowcase</span>
-            </a>
-            <div class="header-actions">
-                <div class="search-container">
-                    <input type="text" class="search-input" placeholder="Search code examples...">
-                    <div class="search-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                        </svg>
-                    </div>
-                </div>
-                <button class="theme-toggle" id="themeToggle">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="theme-icon-light" viewBox="0 0 16 16">
-                        <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="theme-icon-dark" viewBox="0 0 16 16" style="display: none;">
-                        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
-                    </svg>
-                </button>
-            </div>
-        </div>
-    </div>
-</header>
-
+<div id="navbar-placeholder"></div>
 <main>
     <div class="container">
         <h1 class="section-title">Interactive Code Examples</h1>
@@ -54,7 +27,7 @@
         </div>
 
         <div class="code-grid">
-            <!-- Interactive Counter -->
+            <!-- Interactive Counter (FREE) -->
             <div class="code-card" data-id="counter" data-categories="javascript,interactive">
                 <div class="card-header">
                     <span class="card-category">JavaScript</span>
@@ -75,10 +48,7 @@
                 <div class="card-footer">
                     <div class="card-meta">
                         <div class="card-meta-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-                            </svg>
+                            <i class="fas fa-level-up-alt"></i>
                             <span>Beginner</span>
                         </div>
                     </div>
@@ -86,28 +56,21 @@
                 </div>
                 <div class="social-bar">
                     <div class="social-action like-btn" data-id="counter">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M8.864.046C7.908-.193 7.02.53 6.956 1.466c-.072 1.051-.23 2.016-.428 2.59-.125.36-.479 1.013-1.04 1.639-.557.623-1.282 1.178-2.131 1.41C2.685 7.288 2 7.87 2 8.72v4.001c0 .845.682 1.464 1.448 1.545 1.07.114 1.564.415 2.068.723l.048.03c.272.165.578.348.97.484.397.136.861.217 1.466.217h3.5c.937 0 1.599-.477 1.934-1.064a1.86 1.86 0 0 0 .254-.912c0-.152-.023-.312-.077-.464.201-.263.38-.578.488-.901.11-.33.172-.762.004-1.149.069-.13.12-.269.159-.403.077-.27.113-.568.113-.857 0-.288-.036-.585-.113-.856a2.144 2.144 0 0 0-.138-.362 1.9 1.9 0 0 0 .234-1.734c-.206-.592-.682-1.1-1.2-1.272-.847-.282-1.803-.276-2.516-.211a9.84 9.84 0 0 0-.443.05 9.365 9.365 0 0 0-.062-4.509A1.38 1.38 0 0 0 9.125.111L8.864.046zM11.5 14.721H8c-.51 0-.863-.069-1.14-.164-.281-.097-.506-.228-.776-.393l-.04-.024c-.555-.339-1.198-.731-2.49-.868-.333-.036-.554-.29-.554-.55V8.72c0-.254.226-.543.62-.65 1.095-.3 1.977-.996 2.614-1.708.635-.71 1.064-1.475 1.238-1.978.243-.7.407-1.768.482-2.85.025-.362.36-.594.667-.518l.262.066c.16.04.258.143.288.255a8.34 8.34 0 0 1-.145 4.725.5.5 0 0 0 .595.644l.003-.001.014-.003.058-.014a8.908 8.908 0 0 1 1.036-.157c.663-.06 1.457-.054 2.11.164.175.058.45.3.57.65.107.308.087.67-.266 1.022l-.353.353.353.354c.043.043.105.141.154.315.048.167.075.37.075.581 0 .212-.027.414-.075.582-.05.174-.111.272-.154.315l-.353.353.353.354c.047.047.109.177.005.488a2.224 2.224 0 0 1-.505.805l-.353.353.353.354c.006.005.041.05.041.17a.866.866 0 0 1-.121.416c-.165.288-.503.56-1.066.56z"/>
-                        </svg>
+                        <i class="far fa-heart"></i>
                         <span class="social-count like-count">0</span>
                     </div>
                     <div class="social-action comment-btn" data-id="counter">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-                        </svg>
+                        <i class="far fa-comment"></i>
                         <span class="social-count comment-count">0</span>
                     </div>
                     <div class="social-views">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
-                            <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
-                        </svg>
+                        <i class="fas fa-eye"></i>
                         <span>15</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Advanced Todo App -->
+            <!-- Advanced Todo App (FREE) -->
             <div class="code-card" data-id="todo" data-categories="javascript,interactive">
                 <div class="card-header">
                     <span class="card-category">JavaScript</span>
@@ -139,10 +102,7 @@
                 <div class="card-footer">
                     <div class="card-meta">
                         <div class="card-meta-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
-                            </svg>
+                            <i class="fas fa-level-up-alt"></i>
                             <span>Intermediate</span>
                         </div>
                     </div>
@@ -150,28 +110,21 @@
                 </div>
                 <div class="social-bar">
                     <div class="social-action like-btn" data-id="todo">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M8.864.046C7.908-.193 7.02.53 6.956 1.466c-.072 1.051-.23 2.016-.428 2.59-.125.36-.479 1.013-1.04 1.639-.557.623-1.282 1.178-2.131 1.41C2.685 7.288 2 7.87 2 8.72v4.001c0 .845.682 1.464 1.448 1.545 1.07.114 1.564.415 2.068.723l.048.03c.272.165.578.348.97.484.397.136.861.217 1.466.217h3.5c.937 0 1.599-.477 1.934-1.064a1.86 1.86 0 0 0 .254-.912c0-.152-.023-.312-.077-.464.201-.263.38-.578.488-.901.11-.33.172-.762.004-1.149.069-.13.12-.269.159-.403.077-.27.113-.568.113-.857 0-.288-.036-.585-.113-.856a2.144 2.144 0 0 0-.138-.362 1.9 1.9 0 0 0 .234-1.734c-.206-.592-.682-1.1-1.2-1.272-.847-.282-1.803-.276-2.516-.211a9.84 9.84 0 0 0-.443.05 9.365 9.365 0 0 0-.062-4.509A1.38 1.38 0 0 0 9.125.111L8.864.046zM11.5 14.721H8c-.51 0-.863-.069-1.14-.164-.281-.097-.506-.228-.776-.393l-.04-.024c-.555-.339-1.198-.731-2.49-.868-.333-.036-.554-.29-.554-.55V8.72c0-.254.226-.543.62-.65 1.095-.3 1.977-.996 2.614-1.708.635-.71 1.064-1.475 1.238-1.978.243-.7.407-1.768.482-2.85.025-.362.36-.594.667-.518l.262.066c.16.04.258.143.288.255a8.34 8.34 0 0 1-.145 4.725.5.5 0 0 0 .595.644l.003-.001.014-.003.058-.014a8.908 8.908 0 0 1 1.036-.157c.663-.06 1.457-.054 2.11.164.175.058.45.3.57.65.107.308.087.67-.266 1.022l-.353.353.353.354c.043.043.105.141.154.315.048.167.075.37.075.581 0 .212-.027.414-.075.582-.05.174-.111.272-.154.315l-.353.353.353.354c.047.047.109.177.005.488a2.224 2.224 0 0 1-.505.805l-.353.353.353.354c.006.005.041.05.041.17a.866.866 0 0 1-.121.416c-.165.288-.503.56-1.066.56z"/>
-                        </svg>
+                        <i class="far fa-heart"></i>
                         <span class="social-count like-count">2</span>
                     </div>
                     <div class="social-action comment-btn" data-id="todo">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-                        </svg>
+                        <i class="far fa-comment"></i>
                         <span class="social-count comment-count">1</span>
                     </div>
                     <div class="social-views">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
-                            <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
-                        </svg>
+                        <i class="fas fa-eye"></i>
                         <span>23</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Image Gallery with Transitions -->
+            <!-- Image Gallery with Transitions (FREE) -->
             <div class="code-card" data-id="gallery" data-categories="javascript,css,animation">
                 <div class="card-header">
                     <span class="card-category">CSS & JavaScript</span>
@@ -201,11 +154,7 @@
                 <div class="card-footer">
                     <div class="card-meta">
                         <div class="card-meta-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14z"/>
-                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
-                            </svg>
+                            <i class="fas fa-level-up-alt"></i>
                             <span>Intermediate</span>
                         </div>
                     </div>
@@ -213,31 +162,25 @@
                 </div>
                 <div class="social-bar">
                     <div class="social-action like-btn" data-id="gallery">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M8.864.046C7.908-.193 7.02.53 6.956 1.466c-.072 1.051-.23 2.016-.428 2.59-.125.36-.479 1.013-1.04 1.639-.557.623-1.282 1.178-2.131 1.41C2.685 7.288 2 7.87 2 8.72v4.001c0 .845.682 1.464 1.448 1.545 1.07.114 1.564.415 2.068.723l.048.03c.272.165.578.348.97.484.397.136.861.217 1.466.217h3.5c.937 0 1.599-.477 1.934-1.064a1.86 1.86 0 0 0 .254-.912c0-.152-.023-.312-.077-.464.201-.263.38-.578.488-.901.11-.33.172-.762.004-1.149.069-.13.12-.269.159-.403.077-.27.113-.568.113-.857 0-.288-.036-.585-.113-.856a2.144 2.144 0 0 0-.138-.362 1.9 1.9 0 0 0 .234-1.734c-.206-.592-.682-1.1-1.2-1.272-.847-.282-1.803-.276-2.516-.211a9.84 9.84 0 0 0-.443.05 9.365 9.365 0 0 0-.062-4.509A1.38 1.38 0 0 0 9.125.111L8.864.046zM11.5 14.721H8c-.51 0-.863-.069-1.14-.164-.281-.097-.506-.228-.776-.393l-.04-.024c-.555-.339-1.198-.731-2.49-.868-.333-.036-.554-.29-.554-.55V8.72c0-.254.226-.543.62-.65 1.095-.3 1.977-.996 2.614-1.708.635-.71 1.064-1.475 1.238-1.978.243-.7.407-1.768.482-2.85.025-.362.36-.594.667-.518l.262.066c.16.04.258.143.288.255a8.34 8.34 0 0 1-.145 4.725.5.5 0 0 0 .595.644l.003-.001.014-.003.058-.014a8.908 8.908 0 0 1 1.036-.157c.663-.06 1.457-.054 2.11.164.175.058.45.3.57.65.107.308.087.67-.266 1.022l-.353.353.353.354c.043.043.105.141.154.315.048.167.075.37.075.581 0 .212-.027.414-.075.582-.05.174-.111.272-.154.315l-.353.353.353.354c.047.047.109.177.005.488a2.224 2.224 0 0 1-.505.805l-.353.353.353.354c.006.005.041.05.041.17a.866.866 0 0 1-.121.416c-.165.288-.503.56-1.066.56z"/>
-                        </svg>
+                        <i class="far fa-heart"></i>
                         <span class="social-count like-count">3</span>
                     </div>
                     <div class="social-action comment-btn" data-id="gallery">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-                        </svg>
+                        <i class="far fa-comment"></i>
                         <span class="social-count comment-count">2</span>
                     </div>
                     <div class="social-views">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
-                            <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
-                        </svg>
+                        <i class="fas fa-eye"></i>
                         <span>18</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Interactive Color Picker -->
-            <div class="code-card" data-id="color-picker" data-categories="javascript,css,interactive">
+            <!-- Interactive Color Picker (PRO) -->
+            <div class="code-card premium-code" data-id="color-picker" data-categories="javascript,css,interactive">
                 <div class="card-header">
                     <span class="card-category">Interactive</span>
+                    <div class="premium-badge"><i class="fas fa-crown"></i> PRO</div>
                     <h3 class="card-title">Color Picker</h3>
                     <p class="card-description">A customizable RGB color picker with real-time preview.</p>
                 </div>
@@ -267,42 +210,35 @@
                 <div class="card-footer">
                     <div class="card-meta">
                         <div class="card-meta-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-                            </svg>
+                            <i class="fas fa-level-up-alt"></i>
                             <span>Beginner</span>
                         </div>
                     </div>
-                    <button class="view-btn">View Code</button>
+                    <button class="view-btn premium-btn">
+                        <i class="fa-solid fa-lock"></i> Unlock
+                    </button>
                 </div>
                 <div class="social-bar">
                     <div class="social-action like-btn" data-id="color-picker">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M8.864.046C7.908-.193 7.02.53 6.956 1.466c-.072 1.051-.23 2.016-.428 2.59-.125.36-.479 1.013-1.04 1.639-.557.623-1.282 1.178-2.131 1.41C2.685 7.288 2 7.87 2 8.72v4.001c0 .845.682 1.464 1.448 1.545 1.07.114 1.564.415 2.068.723l.048.03c.272.165.578.348.97.484.397.136.861.217 1.466.217h3.5c.937 0 1.599-.477 1.934-1.064a1.86 1.86 0 0 0 .254-.912c0-.152-.023-.312-.077-.464.201-.263.38-.578.488-.901.11-.33.172-.762.004-1.149.069-.13.12-.269.159-.403.077-.27.113-.568.113-.857 0-.288-.036-.585-.113-.856a2.144 2.144 0 0 0-.138-.362 1.9 1.9 0 0 0 .234-1.734c-.206-.592-.682-1.1-1.2-1.272-.847-.282-1.803-.276-2.516-.211a9.84 9.84 0 0 0-.443.05 9.365 9.365 0 0 0-.062-4.509A1.38 1.38 0 0 0 9.125.111L8.864.046zM11.5 14.721H8c-.51 0-.863-.069-1.14-.164-.281-.097-.506-.228-.776-.393l-.04-.024c-.555-.339-1.198-.731-2.49-.868-.333-.036-.554-.29-.554-.55V8.72c0-.254.226-.543.62-.65 1.095-.3 1.977-.996 2.614-1.708.635-.71 1.064-1.475 1.238-1.978.243-.7.407-1.768.482-2.85.025-.362.36-.594.667-.518l.262.066c.16.04.258.143.288.255a8.34 8.34 0 0 1-.145 4.725.5.5 0 0 0 .595.644l.003-.001.014-.003.058-.014a8.908 8.908 0 0 1 1.036-.157c.663-.06 1.457-.054 2.11.164.175.058.45.3.57.65.107.308.087.67-.266 1.022l-.353.353.353.354c.043.043.105.141.154.315.048.167.075.37.075.581 0 .212-.027.414-.075.582-.05.174-.111.272-.154.315l-.353.353.353.354c.047.047.109.177.005.488a2.224 2.224 0 0 1-.505.805l-.353.353.353.354c.006.005.041.05.041.17a.866.866 0 0 1-.121.416c-.165.288-.503.56-1.066.56z"/>
-                        </svg>
+                        <i class="far fa-heart"></i>
                         <span class="social-count like-count">5</span>
                     </div>
                     <div class="social-action comment-btn" data-id="color-picker">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-                        </svg>
+                        <i class="far fa-comment"></i>
                         <span class="social-count comment-count">3</span>
                     </div>
                     <div class="social-views">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
-                            <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
-                        </svg>
+                        <i class="fas fa-eye"></i>
                         <span>27</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Weather API -->
-            <div class="code-card" data-id="weather" data-categories="javascript,api">
+            <!-- Weather API (PRO) -->
+            <div class="code-card premium-code" data-id="weather" data-categories="javascript,api">
                 <div class="card-header">
                     <span class="card-category">API</span>
+                    <div class="premium-badge"><i class="fas fa-crown"></i> PRO</div>
                     <h3 class="card-title">Weather App</h3>
                     <p class="card-description">Fetch and display weather data from a public API.</p>
                 </div>
@@ -334,34 +270,171 @@
                 <div class="card-footer">
                     <div class="card-meta">
                         <div class="card-meta-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
-                            </svg>
+                            <i class="fas fa-level-up-alt"></i>
+                            <span>Intermediate</span>
+                        </div>
+                    </div>
+                    <button class="view-btn premium-btn">
+                        <i class="fa-solid fa-lock"></i>Unlock
+                    </button>
+                </div>
+                <div class="social-bar">
+                    <div class="social-action like-btn" data-id="weather">
+                        <i class="far fa-heart"></i>
+                        <span class="social-count like-count">1</span>
+                    </div>
+                    <div class="social-action comment-btn" data-id="weather">
+                        <i class="far fa-comment"></i>
+                        <span class="social-count comment-count">0</span>
+                    </div>
+                    <div class="social-views">
+                        <i class="fas fa-eye"></i>
+                        <span>12</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Visualization (FREE) -->
+            <div class="code-card" data-id="chart" data-categories="javascript,interactive">
+                <div class="card-header">
+                    <span class="card-category">Data Visualization</span>
+                    <h3 class="card-title">Interactive Chart</h3>
+                    <p class="card-description">A responsive bar chart with interactive tooltips and animations.</p>
+                </div>
+                <div class="card-body">
+                    <div class="card-preview">
+                        <div class="chart-container">
+                            <div class="chart-bar" style="height: 60%;" data-value="60">
+                                <div class="chart-tooltip">Q1: 60%</div>
+                            </div>
+                            <div class="chart-bar" style="height: 80%;" data-value="80">
+                                <div class="chart-tooltip">Q2: 80%</div>
+                            </div>
+                            <div class="chart-bar" style="height: 45%;" data-value="45">
+                                <div class="chart-tooltip">Q3: 45%</div>
+                            </div>
+                            <div class="chart-bar" style="height: 90%;" data-value="90">
+                                <div class="chart-tooltip">Q4: 90%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="card-meta">
+                        <div class="card-meta-item">
+                            <i class="fas fa-level-up-alt"></i>
                             <span>Intermediate</span>
                         </div>
                     </div>
                     <button class="view-btn">View Code</button>
                 </div>
                 <div class="social-bar">
-                    <div class="social-action like-btn" data-id="weather">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M8.864.046C7.908-.193 7.02.53 6.956 1.466c-.072 1.051-.23 2.016-.428 2.59-.125.36-.479 1.013-1.04 1.639-.557.623-1.282 1.178-2.131 1.41C2.685 7.288 2 7.87 2 8.72v4.001c0 .845.682 1.464 1.448 1.545 1.07.114 1.564.415 2.068.723l.048.03c.272.165.578.348.97.484.397.136.861.217 1.466.217h3.5c.937 0 1.599-.477 1.934-1.064a1.86 1.86 0 0 0 .254-.912c0-.152-.023-.312-.077-.464.201-.263.38-.578.488-.901.11-.33.172-.762.004-1.149.069-.13.12-.269.159-.403.077-.27.113-.568.113-.857 0-.288-.036-.585-.113-.856a2.144 2.144 0 0 0-.138-.362 1.9 1.9 0 0 0 .234-1.734c-.206-.592-.682-1.1-1.2-1.272-.847-.282-1.803-.276-2.516-.211a9.84 9.84 0 0 0-.443.05 9.365 9.365 0 0 0-.062-4.509A1.38 1.38 0 0 0 9.125.111L8.864.046zM11.5 14.721H8c-.51 0-.863-.069-1.14-.164-.281-.097-.506-.228-.776-.393l-.04-.024c-.555-.339-1.198-.731-2.49-.868-.333-.036-.554-.29-.554-.55V8.72c0-.254.226-.543.62-.65 1.095-.3 1.977-.996 2.614-1.708.635-.71 1.064-1.475 1.238-1.978.243-.7.407-1.768.482-2.85.025-.362.36-.594.667-.518l.262.066c.16.04.258.143.288.255a8.34 8.34 0 0 1-.145 4.725.5.5 0 0 0 .595.644l.003-.001.014-.003.058-.014a8.908 8.908 0 0 1 1.036-.157c.663-.06 1.457-.054 2.11.164.175.058.45.3.57.65.107.308.087.67-.266 1.022l-.353.353.353.354c.043.043.105.141.154.315.048.167.075.37.075.581 0 .212-.027.414-.075.582-.05.174-.111.272-.154.315l-.353.353.353.354c.047.047.109.177.005.488a2.224 2.224 0 0 1-.505.805l-.353.353.353.354c.006.005.041.05.041.17a.866.866 0 0 1-.121.416c-.165.288-.503.56-1.066.56z"/>
-                        </svg>
-                        <span class="social-count like-count">1</span>
+                    <div class="social-action like-btn" data-id="chart">
+                        <i class="far fa-heart"></i>
+                        <span class="social-count like-count">7</span>
                     </div>
-                    <div class="social-action comment-btn" data-id="weather">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-                        </svg>
-                        <span class="social-count comment-count">0</span>
+                    <div class="social-action comment-btn" data-id="chart">
+                        <i class="far fa-comment"></i>
+                        <span class="social-count comment-count">4</span>
                     </div>
                     <div class="social-views">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
-                            <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
-                        </svg>
-                        <span>12</span>
+                        <i class="fas fa-eye"></i>
+                        <span>32</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form Validation (PRO) -->
+            <div class="code-card premium-code" data-id="form" data-categories="javascript,interactive">
+                <div class="card-header">
+                    <span class="card-category">Form Validation</span>
+                    <div class="premium-badge"><i class="fas fa-crown"></i> PRO</div>
+                    <h3 class="card-title">Smart Form</h3>
+                    <p class="card-description">A form with real-time validation and custom error messages.</p>
+                </div>
+                <div class="card-body">
+                    <div class="card-preview">
+                        <div class="form-example">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Email">
+                                <div class="form-error">Please enter a valid email</div>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" placeholder="Password">
+                                <div class="form-error">Password must be at least 8 characters</div>
+                            </div>
+                            <button class="form-submit">Submit</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="card-meta">
+                        <div class="card-meta-item">
+                            <i class="fas fa-level-up-alt"></i>
+                            <span>Advanced</span>
+                        </div>
+                    </div>
+                    <button class="view-btn premium-btn">
+                        <i class="fa-solid fa-lock"></i> Unlock
+                    </button>
+                </div>
+                <div class="social-bar">
+                    <div class="social-action like-btn" data-id="form">
+                        <i class="far fa-heart"></i>
+                        <span class="social-count like-count">9</span>
+                    </div>
+                    <div class="social-action comment-btn" data-id="form">
+                        <i class="far fa-comment"></i>
+                        <span class="social-count comment-count">5</span>
+                    </div>
+                    <div class="social-views">
+                        <i class="fas fa-eye"></i>
+                        <span>41</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Animated Loader (FREE) -->
+            <div class="code-card" data-id="loader" data-categories="css,animation">
+                <div class="card-header">
+                    <span class="card-category">CSS Animation</span>
+                    <h3 class="card-title">Animated Loaders</h3>
+                    <p class="card-description">A collection of pure CSS loading animations for your projects.</p>
+                </div>
+                <div class="card-body">
+                    <div class="card-preview">
+                        <div class="loader-container">
+                            <div class="loader-item spinner"></div>
+                            <div class="loader-item pulse"></div>
+                            <div class="loader-item dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="card-meta">
+                        <div class="card-meta-item">
+                            <i class="fas fa-level-up-alt"></i>
+                            <span>Beginner</span>
+                        </div>
+                    </div>
+                    <button class="view-btn">View Code</button>
+                </div>
+                <div class="social-bar">
+                    <div class="social-action like-btn" data-id="loader">
+                        <i class="far fa-heart"></i>
+                        <span class="social-count like-count">12</span>
+                    </div>
+                    <div class="social-action comment-btn" data-id="loader">
+                        <i class="far fa-comment"></i>
+                        <span class="social-count comment-count">3</span>
+                    </div>
+                    <div class="social-views">
+                        <i class="fas fa-eye"></i>
+                        <span>38</span>
                     </div>
                 </div>
             </div>
@@ -370,7 +443,7 @@
 </main>
 
 <!-- Modal -->
-<div class="modal-overlay">
+<div class="modal-overlay" id="codeModal">
     <div class="modal">
         <div class="modal-header">
             <h2 class="modal-title">Interactive Counter</h2>
@@ -386,57 +459,56 @@
             
             <!-- Code Tab -->
             <div class="modal-content active" data-content="code">
-                <div class="code-block">
-                    <div class="code-header">
-                        <div class="code-language">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-                                <path d="M6.854 4.646a.5.5 0 0 1 0 .708L4.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0zm2.292 0a.5.5 0 0 0 0 .708L11.793 8l-2.647 2.646a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708 0z"/>
-                            </svg>
-                            <span>HTML</span>
-                        </div>
-                        <div class="code-actions">
-                            <button class="code-action-btn copy-btn" data-code-type="html">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
-                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
-                                </svg>
-                                <span>Copy</span>
-                            </button>
+                <div class="code-content-wrapper">
+                    <!-- Pro Upgrade Overlay for Free Users -->
+                    <div class="code-pro-overlay" id="codeProOverlay">
+                        <div class="code-pro-overlay-content">
+                            <i class="fa-solid fa-lock"></i>
+                            <h3>Code Access is a Pro Feature</h3>
+                            <p>Upgrade to Pro to view and copy the code for all examples</p>
+                            <button class="code-pro-btn" id="codeProBtn">Upgrade to Pro</button>
                         </div>
                     </div>
-                    <div class="code-content">
-                        <pre><code class="language-html">&lt;div class="counter-example"&gt;
+                    
+                    <div class="code-block">
+                        <div class="code-header">
+                            <div class="code-language">
+                                <i class="fab fa-html5"></i>
+                                <span>HTML</span>
+                            </div>
+                            <div class="code-actions">
+                                <button class="code-action-btn copy-btn" data-code-type="html">
+                                    <i class="far fa-copy"></i>
+                                    <span>Copy</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="code-content">
+                            <pre><code class="language-html">&lt;div class="counter-example"&gt;
     &lt;div class="counter-display"&gt;0&lt;/div&gt;
     &lt;div class="counter-buttons"&gt;
         &lt;button class="counter-btn"&gt;-&lt;/button&gt;
         &lt;button class="counter-btn"&gt;+&lt;/button&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-                    </div>
-                </div>
-                
-                <div class="code-block mt-3">
-                    <div class="code-header">
-                        <div class="code-language">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-                                <path d="M6.854 4.646a.5.5 0 0 1 0 .708L4.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0zm2.292 0a.5.5 0 0 0 0 .708L11.793 8l-2.647 2.646a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708 0z"/>
-                            </svg>
-                            <span>CSS</span>
-                        </div>
-                        <div class="code-actions">
-                            <button class="code-action-btn copy-btn" data-code-type="css">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
-                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
-                                </svg>
-                                <span>Copy</span>
-                            </button>
                         </div>
                     </div>
-                    <div class="code-content">
-                        <pre><code class="language-css">.counter-example {
+                    
+                    <div class="code-block mt-3">
+                        <div class="code-header">
+                            <div class="code-language">
+                                <i class="fab fa-css3-alt"></i>
+                                <span>CSS</span>
+                            </div>
+                            <div class="code-actions">
+                                <button class="code-action-btn copy-btn" data-code-type="css">
+                                    <i class="far fa-copy"></i>
+                                    <span>Copy</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="code-content">
+                            <pre><code class="language-css">.counter-example {
     text-align: center;
     padding: 0.8rem;
 }
@@ -448,86 +520,28 @@
     color: var(--primary);
 }
 
-.counter-buttons {
-    display: flex;
-    gap: 8px;
-    justify-content: center;
-}
-
-.counter-btn {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    border: none;
-    background-color: var(--primary);
-    color: white;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.counter-btn:hover {
-    background-color: var(--primary-dark);
-    transform: scale(1.1);
-}</code></pre>
-                    </div>
-                </div>
-                
-                <div class="code-block mt-3">
-                    <div class="code-header">
-                        <div class="code-language">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-                                <path d="M6.854 4.646a.5.5 0 0 1 0 .708L4.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0zm2.292 0a.5.5 0 0 0 0 .708L11.793 8l-2.647 2.646a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708 0z"/>
-                            </svg>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="code-actions">
-                            <button class="code-action-btn copy-btn" data-code-type="js">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
-                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
-                                </svg>
-                                <span>Copy</span>
-                            </button>
+.............
+</code></pre>
                         </div>
                     </div>
-                    <div class="code-content">
-                        <pre><code class="language-javascript">document.addEventListener('DOMContentLoaded', function() {
-    const counterDisplay = document.querySelector('.counter-display');
-    const counterButtons = document.querySelectorAll('.counter-btn');
-    
-    let count = 0;
-    
-    // Update the display
-    function updateDisplay() {
-        counterDisplay.textContent = count;
-        // Add animation
-        counterDisplay.animate([
-            { transform: 'scale(1.2)' },
-            { transform: 'scale(1)' }
-        ], {
-            duration: 200,
-            easing: 'ease-out'
-        });
-    }
-    
-    // Add event listeners to buttons
-    counterButtons.forEach((button, index) => {
-        button.addEventListener('click', () => {
-            // First button decreases, second increases
-            if (index === 0) {
-                count--;
-            } else {
-                count++;
-            }
-            updateDisplay();
-        });
-    });
-});</code></pre>
+                    
+                    <div class="code-block mt-3">
+                        <div class="code-header">
+                            <div class="code-language">
+                                <i class="fab fa-js"></i>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="code-actions">
+                                <button class="code-action-btn copy-btn" data-code-type="js">
+                                    <i class="far fa-copy"></i>
+                                    <span>Copy</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="code-content">
+                            
+                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -573,13 +587,11 @@
                         </div>
                     </div>
                     <div class="explanation-sidebar">
-                        <!-- Like and Review Section - New Addition -->
+                        <!-- Like and Review Section -->
                         <div class="like-review-section">
                             <div class="like-container">
                                 <button class="like-btn" data-id="counter">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                        <path d="M8.864.046C7.908-.193 7.02.53 6.956 1.466c-.072 1.051-.23 2.016-.428 2.59-.125.36-.479 1.013-1.04 1.639-.557.623-1.282 1.178-2.131 1.41C2.685 7.288 2 7.87 2 8.72v4.001c0 .845.682 1.464 1.448 1.545 1.07.114 1.564.415 2.068.723l.048.03c.272.165.578.348.97.484.397.136.861.217 1.466.217h3.5c.937 0 1.599-.477 1.934-1.064a1.86 1.86 0 0 0 .254-.912c0-.152-.023-.312-.077-.464.201-.263.38-.578.488-.901.11-.33.172-.762.004-1.149.069-.13.12-.269.159-.403.077-.27.113-.568.113-.857 0-.288-.036-.585-.113-.856a2.144 2.144 0 0 0-.138-.362 1.9 1.9 0 0 0 .234-1.734c-.206-.592-.682-1.1-1.2-1.272-.847-.282-1.803-.276-2.516-.211a9.84 9.84 0 0 0-.443.05 9.365 9.365 0 0 0-.062-4.509A1.38 1.38 0 0 0 9.125.111L8.864.046zM11.5 14.721H8c-.51 0-.863-.069-1.14-.164-.281-.097-.506-.228-.776-.393l-.04-.024c-.555-.339-1.198-.731-2.49-.868-.333-.036-.554-.29-.554-.55V8.72c0-.254.226-.543.62-.65 1.095-.3 1.977-.996 2.614-1.708.635-.71 1.064-1.475 1.238-1.978.243-.7.407-1.768.482-2.85.025-.362.36-.594.667-.518l.262.066c.16.04.258.143.288.255a8.34 8.34 0 0 1-.145 4.725.5.5 0 0 0 .595.644l.003-.001.014-.003.058-.014a8.908 8.908 0 0 1 1.036-.157c.663-.06 1.457-.054 2.11.164.175.058.45.3.57.65.107.308.087.67-.266 1.022l-.353.353.353.354c.043.043.105.141.154.315.048.167.075.37.075.581 0 .212-.027.414-.075.582-.05.174-.111.272-.154.315l-.353.353.353.354c.047.047.109.177.005.488a2.224 2.224 0 0 1-.505.805l-.353.353.353.354c.006.005.041.05.041.17a.866.866 0 0 1-.121.416c-.165.288-.503.56-1.066.56z"/>
-                                    </svg>
+                                    <i class="far fa-heart"></i>
                                     <span>Like</span>
                                 </button>
                                 <span class="like-count">0</span>
@@ -604,7 +616,27 @@
         </div>
     </div>
 </div>
+
+
 <script src="js/CodeList.js"></script>
+
+<script src="js/navbar.js"></script>
+<script>
+  fetch('/navbar')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar-placeholder').innerHTML = data;
+
+      const script = document.createElement('script');
+      script.src = 'js/navbar.js';
+      script.onload = () => {
+        if (typeof initializeNavbar === 'function') {
+          initializeNavbar();
+        }
+      };
+      document.body.appendChild(script);
+    });
+</script>
 
 </body>
 </html>

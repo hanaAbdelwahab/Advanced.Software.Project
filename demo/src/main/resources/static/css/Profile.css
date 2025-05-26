@@ -1,0 +1,361 @@
+/* Dark Theme Styling */
+
+body {
+    background-color: #0D1117 !important; /* GitHub dark theme background */
+    font-family: 'Poppins', sans-serif;
+    color: #E6EDF3;
+    margin: 0;
+    padding: 0;
+}
+
+/* Profile Container - Full Screen */
+.profile-container {
+    background: #161B22; /* GitHub card background */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 100%;
+    height: 230vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 60px;
+}
+
+/* Profile Header */
+.profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 400px;
+}
+.profile-img {
+    border-radius: 0; /* Makes the image square */
+    border: 4px solid #30363D; /* Optional border */
+    width: 200px; /* Adjust size */
+    height: 200px; /* Ensures it stays square */
+    object-fit: cover; /* Ensures the image fits well */
+}
+
+
+.username {
+    color: #FFFFFF;
+    font-size: 48px;
+    margin: 80px 0;
+    margin-top: 20px;
+}
+
+/* Dark Theme Styling for Paragraph */
+p {
+    font-family: 'Poppins', sans-serif; /* Match your theme's font */
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #E6EDF3; /* Primary text color */
+    max-width: 600px;
+    margin-left: -45px;
+    padding: 15px 20px;
+    border-radius: 8px;
+  translate: 1rem;
+    word-spacing: 1px;
+    letter-spacing: 0.2px;
+  
+}
+
+p strong {
+    font-weight: 600;
+    color: #6CB6FF; /* Lighter blue or adjust to your theme's accent color */
+}
+
+p span {
+    color: #FF9800; /* Orange accent color */
+    font-size: 1.2rem;
+    margin-left: -20px;
+}
+
+/* Optional: Remove or adjust the border */
+/* p { border: none; } */  /* Remove the border */
+/* p { border: 1px solid #30363D; } */ /* Adjust border color */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    p {
+        font-size: 1rem;
+        padding: 10px 15px;
+        max-width: 90%;
+    }
+    p span {
+        font-size: 1.1rem;
+    }
+}
+.edit-btn {
+    background-color: #21262D;
+    border: 2px solid #8B949E;
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 8px;
+    color: #E6EDF3;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-right: 55px;
+}
+
+.edit-btn:hover {
+    background-color: #30363D;
+}
+
+
+/* Right Section */
+.right-section {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: -100px;
+}
+
+
+
+/* Repositories Section - Full Width */
+.repositories {
+  
+    padding-top: 40px;
+    width: 100%;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content horizontally */
+    margin-left: -250px;
+  
+    
+     
+    
+}
+.repositories h2 {
+    width: 100%;
+  margin-left: 700px;
+}
+
+/* Centering the grid */
+.repo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(250px, 1fr)); /* 2-column layout */
+    column-gap: 200px; /* Increased space between the two columns */
+    row-gap: 40px; /* Space between rows and columns */
+    justify-content: center;
+    margin-left: 420px;
+}
+
+/* Add margin to separate cards from the right */
+.repo-card {
+    background: #161B22;
+    padding: 20px;
+    border-radius: 8px;
+    color: #C9D1D9;
+    border: 2px solid #30363D;
+    min-height: 100px;
+    font-size: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 150%; /* Ensures it adapts */
+    max-width: 900px; /* Makes the cards bigger */
+}
+
+
+/* Repository Title */
+.repo-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #E6EDF3;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+
+
+/* Repository Stats */
+.repo-stats {
+    font-size: 16px;
+    color: #8B949E;
+    margin-top: 10px;
+}
+
+/* Contribution Graph Section - Positioned Below Repositories */
+.contributions {
+    background-color: #0d1117; /* Dark background like GitHub */
+    border: 1px solid #30363d; /* Border similar to GitHub */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px; /* Space inside the box */
+    width: fit-content; /* Adjusts to content size */
+    display: inline-block; /* Prevents full-width stretching */
+    margin-left: -80px;
+}
+
+
+/* Month Labels */
+.months {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin-bottom: 5px;
+    color: #C9D1D9;
+    font-size: 12px;
+    text-align: left;
+    padding-left: 25px;
+}
+
+/* Weekday Labels */
+.weekdays {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-right: 10px;
+    color: #C9D1D9;
+    font-size: 12px;
+}
+
+/* Contribution Graph Layout */
+.contribution-graph {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+
+/* Grid for Contribution Squares */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(53, 15px); /* 53 weeks */
+    grid-template-rows: repeat(7, 15px); /* 7 days */
+    gap: 3px;
+    padding-left: 10px;
+}
+
+/* Contribution Squares */
+.contribution-square {
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+    background-color: #161B22; /* Default empty square */
+    border: 1px solid #30363D;
+    transition: background 0.3s;
+}
+
+/* Different activity levels */
+.level-0 { background-color: #161B22; } /* No contributions */
+.level-1 { background-color: #0e4429; } /* Light green */
+.level-2 { background-color: #006d32; } /* Medium green */
+.level-3 { background-color: #26a641; } /* Darker green */
+.level-4 { background-color: #39d353; } /* Brightest green */
+
+/* Tooltip on Hover */
+.contribution-scale {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;  /* Align it to the right */
+    margin-top: 10px;
+}
+
+.contribution-scale span {
+    color: white;
+    font-size: 12px;
+    margin: 0 5px;
+}
+
+.scale-box {
+    width: 12px;
+    height: 12px;
+    margin: 0 2px;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.less { background-color: #161b22; }  /* Darkest */
+.mid { background-color: #0e4429; }   /* Medium green */
+.more { background-color: #26a641; }  /* Bright green */
+.public-label {
+    background-color: #21262D; /* Same background as edit-btn */
+    border: 1px solid #8B949E; /* Same border as edit-btn */
+    border-radius: 15px; /* Adjust radius for pill shape */
+    padding: 2px 10px; /* Adjust padding for size */
+    color: #E6EDF3; /* Same text color as edit-btn */
+    font-size: 14px; /* Adjust font size */
+    position: absolute; /* Position it relative to the card */
+    top: 10px; /* Adjust top position */
+    right: 10px; /* Adjust right position */
+}
+/* Tips Section Styling */
+/* ... other CSS rules ... */
+
+/* Tips Section Styling */
+/* Enhanced Tips Section Styling */
+/* Enhanced Tips Section Styling */
+/* Enhanced Tips Section Styling */
+.tips-section {
+    background-color: #161B22;
+    border: 1px solid #30363D;
+    border-radius: 12px;
+    padding: 30px;
+    margin: 120px 0 30px -110px; /* Adjusted margin to move left */
+    color: #E6EDF3;
+    width: 100%;
+    max-width: 1200px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: block;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+
+.tips-section h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #6CB6FF;
+    text-align: center;
+}
+
+.tips-section p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.tips-section ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-gap: 20px; /* Space between grid items */
+}
+
+.tips-section li {
+    font-size: 17px;
+    margin-bottom: 12px;
+    padding-left: 20px; /* Add padding for visual spacing */
+    position: relative; /* Needed for pseudo-element */
+}
+
+/* Add custom bullet points */
+.tips-section li::before {
+    content: '•'; /* Use a bullet character */
+    position: absolute;
+    left: 0;
+    color: #6CB6FF; /* Accent color for bullets */
+}
+.line-after-button {
+    width:350%; /* Make the line span the full width of its container */
+    height: 3px; /* Set the line thickness */
+    background-color: #30363D; /* Match the color of your other borders */
+    margin-top: 50px; /* Adjust the top margin to position it below the button */
+    margin-bottom: 20px; /* Add some space below the line */
+}
+.line-after-tips {
+    width:135%; /* Make the line span the full width of its container */
+    height: 3px; /* Set the line thickness */
+    background-color: #30363D; /* Match the color of your other borders */
+    margin-top: 50px; /* Adjust the top margin to position it below the button */
+    margin-bottom: 40px; /* Add some space below the line */
+    margin-left: -380px;
+}

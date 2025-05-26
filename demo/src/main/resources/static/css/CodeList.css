@@ -269,7 +269,10 @@ main {
     display: flex;
     flex-direction: column;
 }
-
+.view-code{
+    margin: 3rem;
+    translate: 42rem;
+}
 .card-preview {
     background-color: #f8f9fa;
     border-radius: var(--border-radius);
