@@ -1,41 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code Editor</title>
-    <link rel="stylesheet" href="../static/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CodeCraft Studio</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
-    <div class="container">
-        <div class="card">
-            <h1>Create Your Post</h1>
-            
-            <div class="input-group">
-                <label for="htmlCode">HTML Code</label>
-                <textarea id="htmlCode" placeholder="Write your HTML code here..."></textarea>
-            </div>
+  <div class="bg-particles" id="particles"></div>
 
-            <div class="input-group">
-                <label for="cssCode">CSS Code</label>
-                <textarea id="cssCode" placeholder="Write your CSS code here..."></textarea>
-            </div>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <div class="logo">
+        <i class="fas fa-code"></i>
+        CodeCraft Studio
+      </div>
+      <div style="display: flex; gap: 20px; align-items: center;">
+        <i class="fas fa-user-circle" style="font-size: 24px; color: #00ff90;"></i>
+      </div>
+    </div>
+  </header>
 
-            <div class="input-group">
-                <label for="jsCode">JavaScript Code</label>
-                <textarea id="jsCode" placeholder="Write your JavaScript code here..."></textarea>
-            </div>
+  <!-- Main Editor + Preview -->
+  <div class="container">
+    <!-- Editor Panel -->
+    <div class="editor-panel">
+      <h1 class="panel-title"><i class="fas fa-magic"></i> Create Your Code</h1>
 
-            <button class="btn" onclick="updatePreview()">Update Preview</button>
-            <button class="btn" onclick="postCode()">Post</button>
-
-            <h2>Live Preview</h2>
-            <div class="preview-container">
-                <iframe id="preview" style="width:100%; height:100%; border:1px solid #4e5561;"></iframe>
-            </div>
+      <div class="code-section">
+        <div class="code-header">
+          <div class="code-icon html-icon">HTML</div>
+          <span class="code-label">HTML Structure</span>
         </div>
+        <textarea id="htmlCode" class="code-textarea"></textarea>
+      </div>
+
+      <div class="code-section">
+        <div class="code-header">
+          <div class="code-icon css-icon">CSS</div>
+          <span class="code-label">Styling & Design</span>
+        </div>
+        <textarea id="cssCode" class="code-textarea"></textarea>
+      </div>
+
+      <div class="code-section">
+        <div class="code-header">
+          <div class="code-icon js-icon">JS</div>
+          <span class="code-label">Interactive Logic</span>
+        </div>
+        <textarea id="jsCode" class="code-textarea"></textarea>
+      </div>
+
+      <div class="action-buttons">
+        <button class="btn btn-primary" onclick="updatePreview()">
+          <i class="fas fa-play"></i> Run Preview
+        </button>
+        <button class="btn btn-secondary" onclick="shareCode()">
+          <i class="fas fa-share"></i> Share Code
+        </button>
+      </div>
     </div>
 
-    <script src="../static/js/editor.js"></script>
+    <!-- Preview Panel -->
+    <div class="preview-panel">
+      <div class="preview-header">
+        <h2 class="preview-title"><i class="fas fa-eye"></i> Live Preview</h2>
+      </div>
+      <div class="preview-container">
+        <iframe id="preview" class="preview-iframe"></iframe>
+        <div class="preview-overlay" id="previewOverlay">
+          <div style="text-align: center;">
+            <i class="fas fa-code" style="font-size: 48px; opacity: 0.3;"></i>
+            <p>Click "Run Preview" to see your code in action</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/editor.js"></script>
 </body>
 </html>
