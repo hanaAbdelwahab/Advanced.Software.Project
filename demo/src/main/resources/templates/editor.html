@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Editor</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Create Your Post</h1>
+            
+            <div class="input-group">
+                <label for="htmlCode">HTML Code</label>
+                <textarea id="htmlCode" placeholder="Write your HTML code here..."></textarea>
+            </div>
+
+            <div class="input-group">
+                <label for="cssCode">CSS Code</label>
+                <textarea id="cssCode" placeholder="Write your CSS code here..."></textarea>
+            </div>
+
+            <div class="input-group">
+                <label for="jsCode">JavaScript Code</label>
+                <textarea id="jsCode" placeholder="Write your JavaScript code here..."></textarea>
+            </div>
+
+            <button class="btn" onclick="updatePreview()">Update Preview</button>
+            <button class="btn" onclick="postCode()">Post</button>
+
+            <h2>Live Preview</h2>
+            <div class="preview-container">
+                <iframe id="preview" style="width:100%; height:100%; border:1px solid #4e5561;"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="../static/js/editor.js"></script>
+</body>
+</html>

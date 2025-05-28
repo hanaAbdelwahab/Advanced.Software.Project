@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html xmlns="https://www.thymleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeReview Pro</title>
+    <link rel="stylesheet" href="css/Dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>  
+    <input type="hidden" id="userPlan" th:value="${plan}" />
+    <div id="navbar-placeholder"></div>
+    <div class="app-container" id="app-container">
+        
+        <!-- Main Content -->
+        <main class="main">
+            <!-- Stats Grid -->
+            <div class="stats-grid">
+                <div class="stat-card purple">
+                    <div class="stat-icon-wrapper purple">
+                        <i class="fas fa-code-pull-request stat-icon"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-value">12</div>
+                        <div class="stat-label">Total Reviews</div>
+                        <div class="stat-trend up">
+                            <i class="fas fa-eye"></i>
+                            <span>8% from last week</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="stat-card red">
+                    <div class="stat-icon-wrapper red">
+                        <i class="fas fa-check-circle stat-icon"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-value">150$</div>
+                        <div class="stat-label">Total Earning</div>
+                        <div class="stat-trend up">
+                            <i class="fas fa-dollar-sign"></i>
+                            <span>12% from last week</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="stat-card green">
+                    <div class="stat-icon-wrapper green">
+                        <i class="fas fa-clock stat-icon"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-value">7</div>
+                        <div class="stat-label">Puplished Code</div>
+                        <div class="stat-trend down">
+                            <i class="fas fa-code"></i>:
+                            <span>3% from last week</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="stat-card blue">
+                    <div class="stat-icon-wrapper blue">
+                        <i class="fas fa-comments stat-icon"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-value">45</div>
+                        <div class="stat-label">Comments</div>
+                        <div class="stat-trend up">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>15% from last week</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Dashboard Grid -->
+            <div class="dashboard-grid" >
+                <!-- Pull Requests Card -->
+                <div class="card pull-requests" >
+                    <div class="card-header" >
+                        <div class="card-title">
+                            <div class="card-title-icon purple">
+                                <i class="fas fa-code-pull-request"></i>
+                            </div>
+                            <span>Transactions</span>
+                        </div>
+                        <div class="card-actions">
+                            <div class="dropdown">
+                                <button class="card-action" id="filter-btn">
+                                    <i class="fas fa-filter"></i>
+                                </button>
+                                <div class="dropdown-menu" id="filter-menu">
+                                    <div class="dropdown-item active" data-filter="all">
+                                        <i class="fas fa-list"></i>
+                                        <span>All PRs</span>
+                                    </div>
+                                    <div class="dropdown-item" data-filter="needs-review">
+                                        <i class="fas fa-clock"></i>
+                                        <span>Needs Review</span>
+                                    </div>
+                                    <div class="dropdown-item" data-filter="approved">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Approved</span>
+                                    </div>
+                                    <div class="dropdown-item" data-filter="changes">
+                                        <i class="fas fa-exclamation-circle"></i>
+                                        <span>Changes Requested</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <button class="card-action" id="sort-btn">
+                                    <i class="fas fa-sort"></i>
+                                </button>
+                                <div class="dropdown-menu" id="sort-menu">
+                                    <div class="dropdown-item active" data-sort="newest">
+                                        <i class="fas fa-clock"></i>
+                                        <span>Newest First</span>
+                                    </div>
+                                    <div class="dropdown-item" data-sort="oldest">
+                                        <i class="fas fa-history"></i>
+                                        <span>Oldest First</span>
+                                    </div>
+                                    <div class="dropdown-item" data-sort="priority">
+                                        <i class="fas fa-exclamation"></i>
+                                        <span>Priority</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="pr-list">
+                            <div class="pr-item" data-pr-id="1" data-status="needs-review">
+                                <div class="pr-avatar">SJ</div>
+                                <div class="pr-content">
+                                    <div class="pr-header">
+                                        <div>
+                                            <div class="pr-title">200$</div>
+                                            <div class="pr-repo">frontend/user-auth</div>
+                                        </div>
+                                        <div class="pr-status review">
+                                            <i class="fas fa-clock"></i>
+                                            <span>Needs Review</span>
+                                        </div>
+                                    </div>
+                                    <div class="pr-meta">
+                                        <div class="pr-meta-item">
+                                            <i class="fas fa-user"></i>
+                                            <span>Sarah Johnson</span>
+                                        </div>
+                                        <div class="pr-meta-item">
+                                            <i class="fas fa-clock"></i>
+                                            <span>2 hours ago</span>
+                                        </div>
+                                        <div class="pr-meta-item">
+                                            <i class="fas fa-code"></i>
+                                            <span>15 files</span>
+                                        </div>
+                                    </div>
+                                    <div class="pr-actions">
+                                        <button class="pr-action primary review-btn" data-pr-id="1">
+                                            <i class="fas fa-eye"></i>
+                                            <span>Review</span>
+                                        </button>
+                                        <button class="pr-action secondary comment-btn" data-pr-id="1">
+                                            <i class="fas fa-comment"></i>
+                                            <span>Comment</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pr-item" data-pr-id="2" data-status="approved">
+                                <div class="pr-avatar">MC</div>
+                                <div class="pr-content">
+                                    <div class="pr-header">
+                                        <div>
+                                            <div class="pr-title">500$</div>
+                                            <div class="pr-repo">backend/api</div>
+                                        </div>
+                                        <div class="pr-status approved">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>Approved</span>
+                                        </div>
+                                    </div>
+                                    <div class="pr-meta">
+                                        <div class="pr-meta-item">
+                                            <i class="fas fa-user"></i>
+                                            <span>Mike Chen</span>
+                                        </div>
+                                        <div class="pr-meta-item">
+                                            <i class="fas fa-clock"></i>
+                                            <span>5 hours ago</span>
+                                        </div>
+                                        <div class="pr-meta-item">
+                                            <i class="fas fa-code"></i>
+                                            <span>3 files</span>
+                                        </div>
+                                    </div>
+                                    <div class="pr-actions">
+                                        <button class="pr-action primary merge-btn" data-pr-id="2">
+                                            <i class="fas fa-code-merge"></i>
+                                            <span>Merge</span>
+                                        </button>
+                                        <button class="pr-action secondary comment-btn" data-pr-id="2">
+                                            <i class="fas fa-comment"></i>
+                                            <span>Comment</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pr-item" data-pr-id="3" data-status="changes">
+                                <div class="pr-avatar">AW</div>
+                                <div class="pr-content">
+                                    <div class="pr-header">
+                                        <div>
+                                            <div class="pr-title">2500$</div>
+                                            <div class="pr-repo">backend/database</div>
+                                        </div>
+                                        <div class="pr-status changes">
+                                            <i class="fas fa-exclamation-circle"></i>
+                                            <span>Changes Requested</span>
+                                        </div>
+                                    </div>
+                                    <div class="pr-meta">
+                                        <div class="pr-meta-item">
+                                            <i class="fas fa-user"></i>
+                                            <span>Alex Wong</span>
+                                        </div>
+                                        <div class="pr-meta-item">
+                                            <i class="fas fa-clock"></i>
+                                            <span>1 day ago</span>
+                                        </div>
+                                        <div class="pr-meta-item">
+                                            <i class="fas fa-code"></i>
+                                            <span>7 files</span>
+                                        </div>
+                                    </div>
+                                    <div class="pr-actions">
+                                        <button class="pr-action primary review-btn" data-pr-id="3">
+                                            <i class="fas fa-eye"></i>
+                                            <span>Review</span>
+                                        </button>
+                                        <button class="pr-action secondary comment-btn" data-pr-id="3">
+                                            <i class="fas fa-comment"></i>
+                                            <span>Comment</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Activity Card -->
+                <div class="card activity">
+                    <div class="card-header">
+                        <div class="card-title">
+                            <div class="card-title-icon blue">
+                                <i class="fas fa-bell"></i>
+                            </div>
+                            <span>Recent Activity</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="card-action" id="mark-all-read">
+                                <i class="fas fa-check-double"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="activity-list">
+                            <div class="activity-item" data-notification-id="1">
+                                <div class="activity-icon mention">
+                                    <i class="fas fa-at"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <div class="activity-text">
+                                        <strong>Sarah Johnson</strong> mentioned you in a comment on <strong>Implement user authentication</strong>
+                                    </div>
+                                    <div class="activity-time">30 minutes ago</div>
+                                </div>
+                            </div>
+                            <div class="activity-item" data-notification-id="2">
+                                <div class="activity-icon comment">
+                                    <i class="fas fa-comment"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <div class="activity-text">
+                                        <strong>Mike Chen</strong> commented on your pull request <strong>Fix pagination bug</strong>
+                                    </div>
+                                    <div class="activity-time">2 hours ago</div>
+                                </div>
+                            </div>
+                            <div class="activity-item" data-notification-id="3">
+                                <div class="activity-icon approval">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <div class="activity-text">
+                                        <strong>Alex Wong</strong> approved your pull request <strong>Update user profile UI</strong>
+                                    </div>
+                                    <div class="activity-time">5 hours ago</div>
+                                </div>
+                            </div>
+                            <div class="activity-item" data-notification-id="4">
+                                <div class="activity-icon changes">
+                                    <i class="fas fa-exclamation-circle"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <div class="activity-text">
+                                        <strong>Lisa Park</strong> requested changes on <strong>Refactor database connection</strong>
+                                    </div>
+                                    <div class="activity-time">1 day ago</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Merge Readiness Card -->
+                <div class="card merge-readiness">
+                    <div class="card-header">
+                        <div class="card-title">
+                            <div class="card-title-icon green">
+                                <i class="fas fa-code-merge"></i>
+                            </div>
+                            <span>Track Reoprts</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="readiness-list">
+                            <div class="readiness-item" data-pr-id="1">
+                                <div class="readiness-progress" style="width: 75%;"></div>
+                                <div class="readiness-content">
+                                    <div class="readiness-header">
+                                        <div class="readiness-title">Login Code</div>
+                                        <div class="readiness-percentage">75%</div>
+                                    </div>
+                                    <div class="readiness-details">
+                                        <div class="readiness-detail success">
+                                            <i class="fas fa-check"></i>
+                                            <span>10 Likes</span>
+                                        </div>
+                                        <div class="readiness-detail success">
+                                            <i class="fas fa-check"></i>
+                                            <span>2 comments </span>
+                                        </div>
+                                        <div class="readiness-detail warning">
+                                            <i class="fas fa-exclamation"></i>
+                                            <span>Reoprts</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="readiness-item" data-pr-id="2">
+                                <div class="readiness-progress" style="width: 100%;"></div>
+                                <div class="readiness-content">
+                                    <div class="readiness-header">
+                                        <div class="readiness-title">welcome page Code</div>
+                                        <div class="readiness-percentage">100%</div>
+                                    </div>
+                                    <div class="readiness-details">
+                                        <div class="readiness-detail success">
+                                            <i class="fas fa-check"></i>
+                                            <span>20 Likes</span>
+                                        </div>
+                                        <div class="readiness-detail success">
+                                            <i class="fas fa-check"></i>
+                                            <span>5 commnets </span>
+                                        </div>
+                                        <div class="readiness-detail success">
+                                            <i class="fas fa-check"></i>
+                                            <span>Reports</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="readiness-item" data-pr-id="3">
+                                <div class="readiness-progress" style="width: 30%;"></div>
+                                <div class="readiness-content">
+                                    <div class="readiness-header">
+                                        <div class="readiness-title">User Dashboard Code</div>
+                                        <div class="readiness-percentage">30%</div>
+                                    </div>
+                                    <div class="readiness-details">
+                                        <div class="readiness-detail success">
+                                            <i class="fas fa-check"></i>
+                                            <span>15 Likes</span>
+                                        </div>
+                                        <div class="readiness-detail danger">
+                                            <i class="fas fa-times"></i>
+                                            <span>7 comments</span>
+                                        </div>
+                                        <div class="readiness-detail danger">
+                                            <i class="fas fa-times"></i>
+                                            <span>Reoprts</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Performance Metrics Card (Replacing Repositories) -->
+                <div class="card team-performance">
+                    <div class="card-header">
+                        <div class="card-title">
+                            <div class="card-title-icon purple">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                            <span>Performance Metrics</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="card-action" id="refresh-metrics">
+                                <i class="fas fa-sync-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="metrics-container">
+                            <div class="metric-item">
+                                <div class="metric-header">
+                                    <div class="metric-title">Code Review Velocity</div>
+                                    <div class="metric-value positive">+11%</div>
+                                </div>
+                                <div class="metric-progress">
+                                    <div class="metric-progress-bar green" style="width: 85%;"></div>
+                                </div>
+                                <div class="metric-details">
+                                    <div class="metric-detail">
+                                        <div class="metric-detail-label">Avg. Review Response Time</div>
+                                        <div class="metric-detail-value">4.2 hours</div>
+                                    </div>
+                                    <div class="metric-detail">
+                                        <div class="metric-detail-label">Reviews Completed</div>
+                                        <div class="metric-detail-value highlight">28 this week</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="metric-item">
+                                <div class="metric-header">
+                                    <div class="metric-title">Code Quality Score</div>
+                                    <div class="metric-value positive">A+</div>
+                                </div>
+                                <div class="metric-progress">
+                                    <div class="metric-progress-bar blue" style="width: 92%;"></div>
+                                </div>
+                                <div class="metric-details">
+                                    <div class="metric-detail">
+                                        <div class="metric-detail-label">Test Coverage</div>
+                                        <div class="metric-detail-value">92%</div>
+                                    </div>
+                                    <div class="metric-detail">
+                                        <div class="metric-detail-label">Code Smells</div>
+                                        <div class="metric-detail-value">-6 this week</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="metric-item">
+                                <div class="metric-header">
+                                    <div class="metric-title">Team Collaboration</div>
+                                    <div class="metric-value positive">+5%</div>
+                                </div>
+                                <div class="metric-progress">
+                                    <div class="metric-progress-bar purple" style="width: 78%;"></div>
+                                </div>
+                                <div class="metric-details">
+                                    <div class="metric-detail">
+                                        <div class="metric-detail-label">Cross Reviews</div>
+                                        <div class="metric-detail-value">15 this week</div>
+                                    </div>
+                                    <div class="metric-detail">
+                                        <div class="metric-detail-label">Helpful Comments</div>
+                                        <div class="metric-detail-value highlight">42 this week</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="metric-item">
+                                <div class="metric-header">
+                                    <div class="metric-title">Deployment Frequency</div>
+                                    <div class="metric-value neutral">Daily</div>
+                                </div>
+                                <div class="metric-progress">
+                                    <div class="metric-progress-bar yellow" style="width: 70%;"></div>
+                                </div>
+                                <div class="metric-details">
+                                    <div class="metric-detail">
+                                        <div class="metric-detail-label">Successful Deploys</div>
+                                        <div class="metric-detail-value">5 this week</div>
+                                    </div>
+                                    <div class="metric-detail">
+                                        <div class="metric-detail-label">Avg. Lead Time</div>
+                                        <div class="metric-detail-value">1.2 days</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Overlay -->
+        <div class="overlay" id="overlay"></div>
+        
+        <!-- Comment Modal -->
+        <div class="modal" id="comment-modal">
+            <div class="modal-header">
+                <h3 class="modal-title">Add Comment</h3>
+                <button class="modal-close" id="close-comment-modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-content">
+                <div class="comment-form">
+                    <div class="form-group">
+                        <label for="comment-text" class="form-label">Your Comment</label>
+                        <textarea id="comment-text" class="form-input form-textarea" placeholder="Type your comment here..."></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn secondary" id="cancel-comment">Cancel</button>
+                <button class="modal-btn primary" id="submit-comment">
+                    <span id="submit-comment-text">Submit</span>
+                    <div class="spinner" id="comment-spinner" style="display: none;"></div>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Create PR Modal -->
+        <div class="modal" id="create-pr-modal">
+            <div class="modal-header">
+                <h3 class="modal-title">Create Pull Request</h3>
+                <button class="modal-close" id="close-create-pr-modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-content">
+                <div class="comment-form">
+                    <div class="form-group">
+                        <label for="pr-title" class="form-label">Title</label>
+                        <input type="text" id="pr-title" class="form-input" placeholder="Enter PR title">
+                    </div>
+                    <div class="form-group">
+                        <label for="pr-repo" class="form-label">Repository</label>
+                        <input type="text" id="pr-repo" class="form-input" placeholder="Enter repository name">
+                    </div>
+                    <div class="form-group">
+                        <label for="pr-description" class="form-label">Description</label>
+                        <textarea id="pr-description" class="form-input form-textarea" placeholder="Describe your changes..."></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn secondary" id="cancel-create-pr">Cancel</button>
+                <button class="modal-btn primary" id="submit-create-pr">
+                    <span id="submit-pr-text">Create Pull Request</span>
+                    <div class="spinner" id="pr-spinner" style="display: none;"></div>
+                </button>
+            </div>
+        </div>
+        
+        <!-- User Profile Dropdown -->
+        <div class="dropdown-menu" id="user-dropdown">
+            <div class="dropdown-item">
+                <i class="fas fa-user"></i>
+                <span>Profile</span>
+            </div>
+            <div class="dropdown-item">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </div>
+            <div class="dropdown-item">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+            </div>
+        </div>
+        
+        <!-- Toast Container -->
+        <div class="toast-container" id="toast-container"></div>
+    </div>
+
+<script src="js/Dashboard.js"></script>
+<script src="js/navbar.js"></script>
+<script>
+  fetch('/navbar')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar-placeholder').innerHTML = data;
+
+      const script = document.createElement('script');
+      script.src = 'js/navbar.js';
+      script.onload = () => {
+        if (typeof initializeNavbar === 'function') {
+          initializeNavbar();
+        }
+      };
+      document.body.appendChild(script);
+    });
+</script>
+</body>
+</html>

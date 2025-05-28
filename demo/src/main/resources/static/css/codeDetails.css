@@ -1,0 +1,198 @@
+:root {
+    --primary: #4cc9f0;
+    --primary-dark: #4895ef;
+    --secondary: #f72585;
+    --dark: #0d1b2a;
+    --dark-light: #1b263b;
+    --light: #e0e1dd;
+    --gray: #adb5bd;
+    --success: #38b000;
+    --warning: #f48c06;
+    --danger: #e5383b;
+    --border-radius: 8px;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+    --font-main: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    --font-code: "Consolas", "Monaco", "Andale Mono", monospace;
+  }
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    background-color: var(--dark);
+    
+  }
+.code-details-container {
+    width: 100%;
+  }
+  
+  .details-header {
+    background-color: var(--dark-light);
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+  }
+  
+  .back-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary-dark);
+    text-decoration: none;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  
+  .details-title {
+    padding: 1rem;
+    font-size: 1.8rem;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.729);
+  }
+  
+  .details-description {
+    font-size: 1.1rem;
+    color: var(--text-secondary-color);
+    margin-bottom: 2rem;
+  }
+  
+  /* Tabs Styling */
+  .code-tabs {
+    margin-bottom: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  /* Apply to each code block (HTML, CSS, and JS) */
+.code-tabs .tab-content {
+    max-height: 400px; /* Set the fixed height */
+    overflow-y: auto;  /* Enable vertical scrolling */
+    background-color:rgb(66, 66, 66);
+    padding: 1rem; /* Optional: Add padding inside the code area */
+    border-radius: 8px; /* Optional: Rounded corners for the code block */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visual */
+  }
+  
+  
+  .tab-buttons {
+    display: flex;
+    background-color: var(--surface-alt-color);
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .tab-btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    background: none;
+    font-weight: 500;
+    cursor: pointer;
+    color: whitesmoke;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease;
+  }
+  
+  .tab-btn:hover {
+    color: whitesmoke;
+  }
+  
+  .tab-btn.active {
+    color: var(--primary-dark);
+    border-bottom-color: var(--primary-color);
+    background-color: rgba(128, 128, 128, 0.436);
+  }
+  
+  .tab-contents {
+    background-color:transparent;
+  }
+  
+  .tab-content {
+    display: none;
+    padding: 1rem;
+  }
+  
+  .tab-content.active {
+    display: block;
+  }
+  
+  .tab-content pre {
+    margin: 0;
+    white-space: pre-wrap;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  .tab-content code {
+    color: rgba(255, 255, 255, 0.903);
+  }
+  
+  /* Live Preview Section */
+  .live-preview {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--gray);
+  }
+  
+  .live-preview h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    color: var(--primary-dark);
+  }
+  
+  .preview-container {
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--surface-color);
+    display: flex;
+    justify-content: center;
+  }
+  
+  #preview-frame {
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  /* Theme-specific code highlighting */
+  html.dark-theme .tab-content code {
+    color: #e0e0e0;
+  }
+  
+  html.dark-theme .tab-content .token.keyword {
+    color: #c792ea;
+  }
+  
+  html.dark-theme .tab-content .token.string {
+    color: #c3e88d;
+  }
+  
+  html.dark-theme .tab-content .token.comment {
+    color: #676e95;
+  }
+  
+  html.light-theme .tab-content .token.keyword {
+    color: #7c4dff;
+  }
+  
+  html.light-theme .tab-content .token.string {
+    color: #388e3c;
+  }
+  
+  html.light-theme .tab-content .token.comment {
+    color: #9e9e9e;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .tab-btn {
+      padding: 0.75rem 1rem;
+      font-size: 0.9rem;
+    }
+    
+    .tab-content pre {
+      font-size: 0.8rem;
+    }
+  }

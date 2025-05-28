@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/navBar.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>NavBar</title>
+</head>
+<body>
+  <div class="navbar">
+    <header>
+        <div class="container header-content">
+          <a href="#" class="logo">
+            <div class="logo-icon">&lt;/&gt;</div>
+            <span>CodeShowcase</span>
+          </a>
+      
+          <nav class="main-nav">
+            <ul class="nav-links">
+              <li><a href="CodeList" class="nav-link">Codes</a></li>
+              <li><a href="#" class="nav-link">Trending</a></li>
+              <li><a href="Index1" class="nav-link">Your Code</a></li>
+              <li><a href="Dashboard" class="nav-link active">Dashboard</a></li>
+              <li class="user-status">
+                <div id="userStatusBadge"
+                      th:text="${session.userPlan}"
+                      th:class="'user-badge ' + (${session.userPlan} == 'Free' ? 'free' : 'pro')">
+                </div>
+              </li>
+            </ul>
+          </nav>
+      
+          <div class="header-actions">
+            <div class="search-container">
+              <input type="text" class="search-input" placeholder="Search code examples...">
+              <div class="search-icon">
+                <i class="fas fa-search"></i>
+              </div>
+            </div>
+            <div class="notification-bell">
+              <i class="fas fa-bell"></i>
+              <span class="notification-badge" id="notificationBadge">0</span>
+            </div>
+      
+            <!-- User Menu -->
+            <div class="user-menu" id="userMenu">
+              <button id="userMenuBtn" class="user-menu-btn">
+                <img src="https://ui-avatars.com/api/?name=User&background=4361ee&color=fff" alt="User" class="user-avatar">
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="user-dropdown">
+                <div class="user-dropdown-header">
+                  <img src="https://ui-avatars.com/api/?name=User&background=4361ee&color=fff" alt="User" class="user-avatar-lg">
+                  <div class="user-info">
+                    <div class="user-name" th:text="${session.username}"></div>
+                    <div class="user-email" th:text="${session.email}"></div>
+                    <div class="user-plan" id="userPlanDisplay" th:text="${session.userPlan}"> Plan</div>
+                  </div>
+                </div>
+                <ul class="user-dropdown-menu">
+                  <li><a href="profile"><i class="fas fa-user"></i> Profile</a></li>
+                  <li><a href="CodeList"><i class="fas fa-code"></i> My Codes</a></li>
+                  <li><a href="#"><i class="fas fa-heart"></i> Favorites</a></li>                                
+                  <li><a href="settings"><i class="fas fa-cog"></i> Settings</a></li>
+                  <li class="divider"></li>
+                  <li><a href="auth" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Pro Banner -->
+        <div class="pro-banner" id="proBanner">
+          <div class="container">
+            <div class="pro-banner-content">
+              <div class="pro-banner-text">
+                <strong>Upgrade to Pro</strong> to access premium code examples and earn money from your code
+              </div>
+              <button class="pro-banner-btn" id="proBannerBtn">Get Pro</button>
+              <button class="pro-banner-close" id="proBannerClose">&times;</button>
+            </div>
+          </div>
+        </div>
+      </header> 
+    </div>     
+    <!-- Pro Upgrade Modal -->
+<div class="modal-overlay" id="proUpgradeModal">
+    <div class="modal pro-modal">
+        <div class="modal-header">
+            <h2 class="modal-title">Upgrade to Pro</h2>
+            <p class="modal-subtitle">Unlock premium features and earn money from your code</p>
+            <button class="modal-close" id="proModalClose">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="pro-plans">
+                <div class="pro-plan">
+                    <div class="pro-plan-header">
+                        <h3 class="pro-plan-title">Monthly</h3>
+                        <div class="pro-plan-price">$9.99<span>/month</span></div>
+                    </div>
+                    <ul class="pro-plan-features">
+                        <li><i class="fas fa-check"></i> Access all premium code</li>
+                        <li><i class="fas fa-check"></i> Earn 70% on your code sales</li>
+                        <li><i class="fas fa-check"></i> Priority support</li>
+                        <li><i class="fas fa-check"></i> No watermarks</li>
+                    </ul>
+                    <button class="pro-plan-btn" id="monthlyPlanBtn">Choose Plan</button>
+                </div>
+                <div class="pro-plan featured">
+                    <div class="pro-plan-badge">Best Value</div>
+                    <div class="pro-plan-header">
+                        <h3 class="pro-plan-title">Yearly</h3>
+                        <div class="pro-plan-price">$89.99<span>/year</span></div>
+                        <div class="pro-plan-save">Save 25%</div>
+                    </div>
+                    <ul class="pro-plan-features">
+                        <li><i class="fas fa-check"></i> Access all premium code</li>
+                        <li><i class="fas fa-check"></i> Earn 80% on your code sales</li>
+                        <li><i class="fas fa-check"></i> Priority support</li>
+                        <li><i class="fas fa-check"></i> No watermarks</li>
+                        <li><i class="fas fa-check"></i> Early access to new features</li>
+                    </ul>
+                    <button class="pro-plan-btn" id="yearlyPlanBtn">Choose Plan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="js/navbar.js"></script>
+    <script>
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="css/landing.css" rel="stylesheet">
+    <link href="css/hands.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>HomePage</title>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <!-- Logo -->
+        <div class="logo">Logo</div>
+
+        <!-- Navbar Links -->
+        <div class="navbar-links">
+            <a href="#">Home <i class="fa-solid fa-angle-down"></i></a>
+            <a href="#">Price <i class="fa-solid fa-angle-down"></i></a>
+            <a href="#">Product <i class="fa-solid fa-angle-down"></i></a>
+            <a href="#">Solution <i class="fa-solid fa-angle-down"></i></a>
+            <a href="#">Resource <i class="fa-solid fa-angle-down"></i></a>
+        </div>
+
+        <!-- Login/Signup Buttons -->
+        <div class="auth-buttons">
+            <button class="login-btn" onclick="window.location.href='auth'">Sign in</button>
+            <button class="signup-btn" onclick="window.location.href='auth'">Sign up</button>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="sparkling-dots" id="sparklingDots"></div>
+        <h2 class="quote">Build and ship software on a single, collaborative platform</h2>
+        <p>Join the world's most widely adopted AI-powered developer platform.</p>
+        <div class="cursor"></div>
+
+        <div class="eyes">
+            <div class="right-eye">
+                <div class="right-inner"></div>
+            </div>
+            <div class="left-eye">
+                <div class="left-inner"></div>
+            </div>
+        </div>
+
+        <!-- Realistic Light Switch -->
+        <div class="switch-container">
+            <div class="switch-wrapper" id="switch-wrapper"></div>
+        </div>
+        <div class="sigupORsignin">
+            <input type="text" class="sign-text" placeholder="Enter Your Email">
+            <button class="Signup" onclick="window.location.href='auth'">Sign Up</button>
+            <button class="singin" onclick="window.location.href='auth'">Sign in</button>
+        </div>
+    </section>
+
+    <section class="next-section section">
+        <div class="code-background">
+            <div class="platform-message">Join the world's most widely adopted AI-powered developer platform.</div>
+            <div class="code-line">import { AI, DevTools } from '@ai-platform/core';</div>
+            <div class="code-line">import { CodeGenerator } from '@ai-platform/tools';</div>
+            <div class="code-line"></div>
+            <div class="code-line">// Initialize AI development platform</div>
+            <div class="code-line">const platform = new AI.Platform({</div>
+            <div class="code-line">  version: '3.5.0',</div>
+            <div class="code-line">  features: ['code-generation', 'testing', 'deployment']</div>
+            <div class="code-line">});</div>
+            <div class="code-line"></div>
+            <div class="code-line">// Set up collaborative environment</div>
+            <div class="code-line">const team = platform.createTeam('DevTeam');</div>
+            <div class="code-line"></div>
+            <div class="code-line">function buildSoftware() {</div>
+            <div class="code-line">  console.log("Building software on the collaborative platform...");</div>
+            <div class="code-line">  return platform.generateCode('user-authentication');</div>
+            <div class="code-line">}</div>
+            <div class="code-line"></div>
+            <div class="code-line">function deployProject() {</div>
+            <div class="code-line">  console.log("Deploying project to production...");</div>
+            <div class="code-line">  platform.deploy('production', '1.0.0');</div>
+            <div class="code-line">}</div>
+        </div>
+    </section>
+
+    <!-- Third Section -->
+    <section class="third-section section">
+        <div class="content">
+            <h3>Automate any workflow</h3>
+            <p>Optimize your process with simple and secured CI/CD.</p>
+            <div class="options">
+                <a class="actions">Discover Actions ></a>
+                <a>Get up and running in seconds </a>
+                <a>Build on the go</a>
+                <a>Integrate the tools you love</a>
+            </div>
+            
+        </div>
+        <div class="image">
+           <img src="images/image1.png">
+        </div>
+    </section>
+    <!--Fourth section-->
+    <section class="fourth-section section">
+        <i class="fa-solid fa-shield"></i>
+        <p>Built-in application security<br>
+            where found means fixed</p>
+        <div class="fixes">
+            <div class="first-fix">
+                <p>Apply Fixes in seconds.<span>Spend less time fixing vulnerabilities and more time building features</span></p>
+                <a>Explore Advanced Security</a>
+            </div>
+            <div class="second-fix">
+                <p>Solve security debt.<span>Leverage AI-assisted security campaigns to reduce application vulnerabilities and zero-day attacks.</span></p>
+                <a>Discover security campaigns</a>
+            </div>
+            <div class="third-fix">
+                <p>Your secrets, your business: protected.<span>Detect, prevent, and remediate leaked secrets across your organization.</span></p>
+                <a>Read about secret scanning</a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="fifth-section section">
+        <div id="body" class="grey lighten-2 valign-wrapper">
+            <div id="opty_hands" class="valign">
+              <div id="left-arm">
+                <div class="left-hand"></div>
+                <div class="left-shake"></div>
+              </div>
+              <div id="right-arm">
+                <div class="right-hand"></div>
+                <div class="right-shake"></div>
+              </div>
+            </div>
+        </div>
+        <h2>Work together, achieve more</h2>
+        <p>Collaborate with your teams, use management <br>tools that sync with your projects, and code from anywhere<br>all on a single, integrated platform.</p>
+    </section>
+    <section class="sixth-section section">
+        <div id="app">
+            <div class="box">
+              <svg class="upper-gear" v-if="showGear"   viewBox="0 0 357 360" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <defs>
+                      <filter x="-2.0%" y="-1.4%" width="104.0%" height="104.0%" filterUnits="objectBoundingBox" id="filter-1">
+                          <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                          <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                          <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+                          <feMerge>
+                              <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                              <feMergeNode in="SourceGraphic"></feMergeNode>
+                          </feMerge>
+                      </filter>
+                      <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+                          <stop stop-color="#6ADEF7" offset="0%"></stop>
+                          <stop stop-color="#15DFC8" offset="100%"></stop>
+                      </linearGradient>
+                  </defs>
+                  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <g id="gear-blue" filter="url(#filter-1)" transform="translate(4.000000, 2.000000)">
+                          <polygon id="geers-down-teeth" v-if="rotateUpperGear" fill="rgba(191, 191, 191, 0.137)" points="75.6477109 25.2103099 109.778582 63.6050775 133.89471 48.1414757 132.742572 0.289981948 213.297072 1.24189121 210.707223 50.573768 236.421902 65.8207284 270.352544 25.7453485 318.512588 76.731578 294.603253 104.842443 300.262189 137.788351 348.077576 134.003691 348.74063 215.657811 299.91425 210.533913 289.272561 235.129279 323.633203 271.226334 271.491553 322.783709 239.72076 289.516122 212.771881 302.593386 214.954707 351.442743 134.49868 349.657093 133.999748 303.200638 105.623005 287.215128 80.5549672 323.719206 23.9820152 274.909239 61.4347209 236.330654 48.3837167 210.464982 3.40108048 216.937965 0.430467104 137.046518 49.3257786 138.714001 62.9906002 106.444277 25.1013292 79.3805117"></polygon>
+                          <ellipse id="circle-down" fill="#4543bb77" cx="174.5" cy="175.5" rx="89.5" ry="90.5"></ellipse>
+                      </g>
+                  </g>
+              </svg>
+              <svg class="down-gear"  viewBox="0 0 357 360" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <defs>
+                      <filter x="-2.0%" y="-1.4%" width="104.0%" height="104.0%" filterUnits="objectBoundingBox" id="filter-1">
+                          <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                          <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                          <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+                          <feMerge>
+                              <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                              <feMergeNode in="SourceGraphic"></feMergeNode>
+                          </feMerge>
+                      </filter>
+                      <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+                          <stop stop-color="#F76AE9" offset="0%"></stop>
+                          <stop stop-color="#15DFC8" offset="100%"></stop>
+                      </linearGradient>
+                  </defs>
+                  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <g id="gear-ocean" filter="url(#filter-1)" transform="translate(4.000000, 2.000000)">
+                          <polygon id="geers-upper-teeth"  fill="rgba(191, 191, 191, 0.137)" points="75.6477109 25.2103099 109.778582 63.6050775 133.89471 48.1414757 132.742572 0.289981948 213.297072 1.24189121 210.707223 50.573768 236.421902 65.8207284 270.352544 25.7453485 318.512588 76.731578 294.603253 104.842443 300.262189 137.788351 348.077576 134.003691 348.74063 215.657811 299.91425 210.533913 289.272561 235.129279 323.633203 271.226334 271.491553 322.783709 239.72076 289.516122 212.771881 302.593386 214.954707 351.442743 134.49868 349.657093 133.999748 303.200638 105.623005 287.215128 80.5549672 323.719206 23.9820152 274.909239 61.4347209 236.330654 48.3837167 210.464982 3.40108048 216.937965 0.430467104 137.046518 49.3257786 138.714001 62.9906002 106.444277 25.1013292 79.3805117"></polygon>
+                          <ellipse id="circle-upper" fill="#8c21d358" cx="174.5" cy="175.5" rx="89.5" ry="90.5"></ellipse>
+                      </g>
+                  </g>
+              </svg>
+            <svg class="middle-gear" v-if="showMiddleGear"  viewBox="0 0 357 360" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                
+                <defs>
+                    <filter x="-2.0%" y="-1.4%" width="104.0%" height="104.0%" filterUnits="objectBoundingBox" id="filter-1">
+                        <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                        <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                        <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+                        <feMerge>
+                            <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                            <feMergeNode in="SourceGraphic"></feMergeNode>
+                        </feMerge>
+                    </filter>
+                    <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+                        <stop stop-color="#FF5733" offset="0%"></stop>
+                        <stop stop-color="#DF153B" stop-opacity="0.386492301" offset="100%"></stop>
+                    </linearGradient>
+                </defs>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="gear-purple" filter="url(#filter-1)" transform="translate(4.000000, 2.000000)">
+                        <polygon id="geers-upper1-teeth" fill="rgba(191, 191, 191, 0.137)" points="75.6477109 25.2103099 109.778582 63.6050775 133.89471 48.1414757 132.742572 0.289981948 213.297072 1.24189121 210.707223 50.573768 236.421902 65.8207284 270.352544 25.7453485 318.512588 76.731578 294.603253 104.842443 300.262189 137.788351 348.077576 134.003691 348.74063 215.657811 299.91425 210.533913 289.272561 235.129279 323.633203 271.226334 271.491553 322.783709 239.72076 289.516122 212.771881 302.593386 214.954707 351.442743 134.49868 349.657093 133.999748 303.200638 105.623005 287.215128 80.5549672 323.719206 23.9820152 274.909239 61.4347209 236.330654 48.3837167 210.464982 3.40108048 216.937965 0.430467104 137.046518 49.3257786 138.714001 62.9906002 106.444277 25.1013292 79.3805117"></polygon>
+                        <ellipse id="circle-upper1" fill="#8c21d358" cx="174.5" cy="175.5" rx="89.5" ry="90.5"></ellipse>
+                    </g>
+                </g>
+            </svg>
+              </div> 
+            </div>
+        <h2>Millions of developers and businesses call</h2>
+        <canvas id="myLineChart" width="400" height="200"></canvas>
+        <p>Whether you’re scaling your development process <br>
+            or just learning how to code, GitHub is where you belong. <br>
+            Join the world’s most widely adopted AI-powered developer   <br>
+            platform to build the technologies that redefine what’s possible.</p>
+    </section>
+    <footer>
+        <div class="footer-content">
+          <div class="footer-left">
+            <h3>LOGO</h3>
+          </div>
+      
+          <div class="footer-links">
+            <div class="column">
+              <h4>Product</h4>
+              <ul>
+                <li><a href="#">Platform</a></li>
+                <li><a href="#">Developer API</a></li>
+                <li><a href="#">Partners</a></li>
+                <li><a href="#">Education</a></li>
+                <li><a href="#">GitHub CLI</a></li>
+                <li><a href="#">GitHub Desktop</a></li>
+                <li><a href="#">GitHub Mobile</a></li>
+              </ul>
+            </div>
+            <div class="column">
+              <h4>Feature</h4>
+              <ul>
+                <li><a href="#">Security</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Resource</a></li>
+                <li><a href="#">Roadmap</a></li>
+              </ul>
+            </div>
+            <div class="column">
+              <h4>Support</h4>
+              <ul>
+                <li><a href="#">Docs</a></li>
+                <li><a href="#">Community Forum</a></li>
+                <li><a href="#">Professional Services</a></li>
+                <li><a href="#">Premium Support</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Status</a></li>
+                <li><a href="#">Contact GitHub</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="social-media-icons">
+            <!-- Example social media icons -->
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+      </footer>
+      
+    <script src="js/landing.js"></script>
+<script>
+window.addEventListener('load', function() {
+    // Get the context of the canvas element
+    const ctx = document.getElementById('myLineChart').getContext('2d');
+
+    // Initial data for the chart
+    const data = {
+        labels: [0, 1, 2, 3, 4], // X-axis labels (fixed to 5 points)
+        datasets: [{
+            label: 'Developers use our sites',
+            data: [0, 5, 10, 15, 25], // Initial data points
+            borderColor: 'rgba(75, 192, 192, 1)', // Line color
+            backgroundColor: 'rgba(75, 192, 192, 0.2)', // Area under the line color
+            fill: true,
+            borderWidth: 2,
+            tension: 0.4, // Smoothness of the curve
+        }]
+    };
+
+    // Chart configuration
+    const config = {
+        type: 'line', // The chart type is 'line'
+        data: data,
+        options: {
+            responsive: true,
+            scales: {
+                x: {
+                    type: 'linear', // Use linear scale for X-axis
+                    position: 'bottom'
+                },
+                y: {
+                    beginAtZero: true, // Y-axis starts at 0
+                    suggestedMax: 100, // Max value for Y-axis
+                }
+            },
+            plugins: {
+                legend: {
+                    display: true,
+                    position: 'top'
+                }
+            }
+        }
+    };
+
+    // Create the chart
+    const myLineChart = new Chart(ctx, config);
+
+    let increment = 5; // Starting increment value
+    let incrementCount = 0; // To track the number of updates
+
+    // Update the chart with increasing data points
+    const interval = setInterval(() => {
+        if (incrementCount >= 5) { // Stop after 5 increments
+            clearInterval(interval);
+        } else {
+            // Remove the first data point to keep the number of data points at 5
+            data.labels.shift();
+            data.datasets[0].data.shift();
+
+            // Add new data point with incremented value
+            data.labels.push(data.labels[data.labels.length - 1] + 1); // Increase the X value
+            data.datasets[0].data.push(increment); // Add the increment value
+
+            // Increment for the next data point
+            increment += 20; // Increase the value incrementally (you can adjust this as needed)
+
+            // Update the chart with new data
+            myLineChart.update();
+
+            // Increment the update counter
+            incrementCount++;
+        }
+    }, 1000); // Update every second
+});
+        var app = new Vue({
+      el: "#app",
+      data: {
+        showGear:false,
+        showMiddleGear:false 
+      },
+      methods: {
+        toggleshowGear: function() {
+          this.showGear = true
+        }
+      },
+      created () {
+        setTimeOut ( () => {
+          this.toggleshowGear ()
+        }, 100000)
+        
+      }
+    });
+    </script>
+
+</body>
+
+</html>

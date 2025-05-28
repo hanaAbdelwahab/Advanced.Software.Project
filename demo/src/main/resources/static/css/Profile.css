@@ -15,7 +15,7 @@ body {
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     max-width: 100%;
-    height: 200vh;
+    height: 230vh;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -42,8 +42,8 @@ body {
 .username {
     color: #FFFFFF;
     font-size: 48px;
-    margin: 20px 0;
-    margin-top: 70px;
+    margin: 80px 0;
+    margin-top: 20px;
 }
 
 /* Dark Theme Styling for Paragraph */
@@ -55,9 +55,8 @@ p {
     max-width: 600px;
     margin-left: -45px;
     padding: 15px 20px;
-    background-color: #161B22; /* Card background color */
     border-radius: 8px;
-  /* Adjusted shadow for dark theme */
+  translate: 1rem;
     word-spacing: 1px;
     letter-spacing: 0.2px;
   
@@ -133,17 +132,17 @@ p span {
 }
 .repositories h2 {
     width: 100%;
-  margin-left: 500px;
+  margin-left: 700px;
 }
 
 /* Centering the grid */
 .repo-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(350px, 1fr)); /* 2-column layout */
+    grid-template-columns: repeat(2, minmax(250px, 1fr)); /* 2-column layout */
     column-gap: 200px; /* Increased space between the two columns */
     row-gap: 40px; /* Space between rows and columns */
     justify-content: center;
-    margin-left: 300px;
+    margin-left: 420px;
 }
 
 /* Add margin to separate cards from the right */
@@ -296,7 +295,7 @@ p span {
     border: 1px solid #30363D;
     border-radius: 12px;
     padding: 30px;
-    margin: 90px 0 30px -110px; /* Adjusted margin to move left */
+    margin: 120px 0 30px -110px; /* Adjusted margin to move left */
     color: #E6EDF3;
     width: 100%;
     max-width: 1200px;

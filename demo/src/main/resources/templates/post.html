@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Post</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Your Posts</h1>
+
+            <div class="input-group">
+                <label for="exampleHtml">Example HTML</label>
+                <textarea id="exampleHtml" readonly>
+<!DOCTYPE html>
+<html>
+<head><title> HTML</title></head>
+<body><h1>Hello World</h1></body>
+</html>
+                </textarea>
+            </div>
+
+            <div class="input-group">
+                <label for="exampleCss"> CSS</label>
+                <textarea id="exampleCss" readonly>
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+                </textarea>
+            </div>
+
+            <div class="input-group">
+                <label for="exampleJs"> JavaScript</label>
+                <textarea id="exampleJs" readonly>
+console.log("Hello World!");
+                </textarea>
+            </div>
+
+            <h2>Your Code</h2>
+            <div class="input-group">
+                <label for="userHtml">HTML Code</label>
+                <textarea id="userHtml" readonly></textarea>
+            </div>
+
+            <div class="input-group">
+                <label for="userCss">CSS Code</label>
+                <textarea id="userCss" readonly></textarea>
+            </div>
+
+            <div class="input-group">
+                <label for="userJs">JavaScript Code</label>
+                <textarea id="userJs" readonly></textarea>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function() {
+            var userPost = JSON.parse(localStorage.getItem("userPost"));
+            document.getElementById("userHtml").value = userPost.html;
+            document.getElementById("userCss").value = userPost.css;
+            document.getElementById("userJs").value = userPost.js;
+        }
+    </script>
+</body>
+</html>
