@@ -158,3 +158,37 @@ body {
   align-items: center;
   justify-content: center;
 }
+.explanation-section {
+  margin-top: 20px;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.explanation-section label {
+  font-weight: bold;
+  color: #fff;
+  font-size: 14px;
+}
+
+#code-explanation {
+  width: 100%;
+  min-height: 120px;
+  padding: 10px;
+  font-size: 14px;
+  font-family: monospace;
+  color: #fff;
+  background-color: #1f1f2e;
+  border: 1px solid #444;
+  border-radius: 6px;
+  resize: vertical;
+  box-shadow: inset 0 0 5px rgba(0, 255, 144, 0.3);
+}
+.code-icon.explain-icon {
+  background-color: #00c3ff;
+  color: #fff;
+}
+textarea#code-explanation {
+  resize: vertical;
+}

@@ -10,6 +10,10 @@ function createParticles() {
     container.appendChild(p);
   }
 }
+function getExplanation() {
+  const explanation = document.getElementById('code-explanation').value;
+  console.log("User explanation:", explanation);
+}
 
 function updatePreview() {
   const html = document.getElementById('htmlCode').value;
