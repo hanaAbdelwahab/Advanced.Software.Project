@@ -40,12 +40,42 @@ function shareCode() {
   const html = document.getElementById('htmlCode').value;
   const css = document.getElementById('cssCode').value;
   const js = document.getElementById('jsCode').value;
+  const explanation = document.getElementById('code-explanation').value;
+
   if (!html.trim() && !css.trim() && !js.trim()) {
     alert('Please write some code before sharing!');
     return;
   }
-  alert(`Code ready to share!\n\nHTML:\n${html}\n\nCSS:\n${css}\n\nJS:\n${js}`);
+
+  const payload = {
+    html: html,
+    css: css,
+    js: js,
+    explanation: explanation
+  };
+
+  fetch('/api/codes/save', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(payload)
+  })
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Failed to save code');
+    }
+    return response.json();
+  })
+  .then(data => {
+    alert('Code shared successfully! Code ID: ' + data.codeId);
+  })
+  .catch(error => {
+    console.error('Error:', error);
+    alert('Error saving code. Check console for details.');
+  });
 }
+
 
 document.addEventListener('DOMContentLoaded', () => {
   createParticles();
